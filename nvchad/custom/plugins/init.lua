@@ -115,4 +115,7 @@ return {
       require("custom.plugins.venn").setup()
     end,
   },
+  ["puremourning/vimspector"] = {
+
+  }
 }
