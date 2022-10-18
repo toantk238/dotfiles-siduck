@@ -117,5 +117,8 @@ return {
   },
   ["puremourning/vimspector"] = {
 
+  },
+  ["preservim/tagbar"] = {
+
   }
 }
