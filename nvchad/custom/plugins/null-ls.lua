@@ -24,7 +24,11 @@ local sources = {
   b.formatting.clang_format,
 
   -- python
-  b.formatting.black
+  b.formatting.black,
+  -- ruby
+  b.formatting.rubocop,
+  -- xml
+  b.formatting.xmllint
 }
 
 null_ls.setup {
