@@ -4,7 +4,11 @@ require "custom.autocmds"
 vim.filetype.add {
   filename = {
     [".mkshrc"] = "sh",
+    ["Appfile"] = "ruby"
   },
+  pattern = {
+    [".*Fastfile"] = "ruby"
+  }
 }
 
 vim.g.loaded_python3_provider = nil
