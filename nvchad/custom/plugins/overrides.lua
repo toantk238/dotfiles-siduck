@@ -93,7 +93,6 @@ M.mason = {
 		"shellcheck",
 
 		-- xml
-		"xmlformatter",
 		"lemminx",
 
 		-- ruby
