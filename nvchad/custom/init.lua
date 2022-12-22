@@ -13,7 +13,7 @@ vim.filetype.add({
 })
 
 vim.g.loaded_ruby_provider = nil
-vim.g.ruby_host_prog = "/usr/local/rvm/gems/ruby-3.1.2/bin/neovim-ruby-host"
+vim.g.ruby_host_prog = os.getenv("GEM_HOME") + "/bin/neovim-ruby-host"
 
 vim.g.loaded_python3_provider = nil
 vim.g.python3_host_prog = "/usr/bin/python3"
