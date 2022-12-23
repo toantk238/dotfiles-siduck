@@ -9,6 +9,7 @@ vim.filetype.add({
 	pattern = {
 		[".*Fastfile"] = "ruby",
 		["Jenkinsfile.*"] = "groovy",
+		[".envrc.*"] = "bash",
 	},
 })
 
