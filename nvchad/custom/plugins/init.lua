@@ -121,24 +121,38 @@ return {
 	},
 
 	["mfussenegger/nvim-dap"] = {
-    opt = true,
-  },
+		opt = true,
+		module = { "dap" },
+		ft = { "python" },
+	},
 
 	["rcarriga/nvim-dap-ui"] = {
 		after = "nvim-dap",
-    opt = true,
+		opt = true,
+		config = function()
+      local present, dapui = pcall(require, "dapui")
+      if present then
+        dapui.setup()
+      end
+		end,
 	},
 
 	["theHamsta/nvim-dap-virtual-text"] = {
-    after = "nvim-dap",
-    opt = true,
-  },
-
-  ["mfussenegger/nvim-dap-python"] = {
-    after = "nvim-dap",
-    opt = true,
+		after = "nvim-dap",
+		opt = true,
     config = function ()
-      require("custom.plugins.nvim-dap-python")
+      local present, dap_virtual_text = pcall(require, "nvim-dap-virtual-text")
+      if present then
+        dap_virtual_text.setup()
+      end
     end
-  }
+	},
+
+	["mfussenegger/nvim-dap-python"] = {
+		after = "nvim-dap",
+		opt = true,
+		config = function()
+			require("custom.plugins.nvim-dap-python")
+		end,
+	},
 }
