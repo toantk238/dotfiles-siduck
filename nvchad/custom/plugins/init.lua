@@ -110,10 +110,11 @@ return {
       }
     end,
   },
-  ["puremourning/vimspector"] = {
-    opt = true,
-    cmd = "VimspectorRestart"
-  },
+  --["puremourning/vimspector"] = {
+  --  disable = false,
+  --  opt = true,
+  --  cmd = "VimspectorRestart"
+  --},
   ["preservim/tagbar"] = {
     opt = true,
     cmd = "TagbarToggle"
