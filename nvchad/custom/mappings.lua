@@ -54,4 +54,14 @@ M.tagbar = {
 	},
 }
 
+M.dap = {
+  n = {
+    ["<F5>"] = {"<cmd>lua require'dap'.continue()<cr>", "Start Debug"},
+    ["<F9>"] = {"<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint"},
+    ["<F3>"] = {"<cmd>lua require'dap'.terminate()<cr>", "Terminate"},
+    ["<leader>du"] = {"<cmd>lua require'dapui'.toggle()<cr>", "Toggle UI"},
+    ["<leader>ep"] = {"<cmd>lua require'dapui'.eval(vim.fn.input '[Expression] > ')<cr>", "Evaluate Input"},
+  }
+}
+
 return M
