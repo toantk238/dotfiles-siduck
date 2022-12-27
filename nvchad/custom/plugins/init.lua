@@ -130,22 +130,23 @@ return {
 		after = "nvim-dap",
 		opt = true,
 		config = function()
-      local present, dapui = pcall(require, "dapui")
-      if present then
-        dapui.setup()
-      end
+			local present, dapui = pcall(require, "dapui")
+			if present then
+				dapui.setup()
+			end
 		end,
 	},
 
 	["theHamsta/nvim-dap-virtual-text"] = {
 		after = "nvim-dap",
 		opt = true,
-    config = function ()
-      local present, dap_virtual_text = pcall(require, "nvim-dap-virtual-text")
-      if present then
-        dap_virtual_text.setup()
-      end
-    end
+		config = function()
+			local dap_virtual_text = require("nvim-dap-virtual-text")
+			dap_virtual_text.setup({
+				commented = true,
+        highlight_changed_variables = true,
+			})
+		end,
 	},
 
 	["mfussenegger/nvim-dap-python"] = {
