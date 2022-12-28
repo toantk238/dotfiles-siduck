@@ -130,10 +130,7 @@ return {
 		after = "nvim-dap",
 		opt = true,
 		config = function()
-			local present, dapui = pcall(require, "dapui")
-			if present then
-				dapui.setup()
-			end
+      require("custom.plugins.nvim-dap-ui")
 		end,
 	},
 
