@@ -64,6 +64,7 @@ M.dap = {
     ["<leader>du"] = {"<cmd>lua require'dapui'.toggle()<cr>", "Toggle UI"},
     ["<leader>dh"] = {"<cmd>lua require'dap.ui.widgets'.hover()<cr>", "Hover Variables"},
     ["<leader>ep"] = {"<cmd>lua require'dapui'.eval(vim.fn.input '[Expression] > ')<cr>", "Evaluate Input"},
+    ["<leader>de"] = {"<cmd>lua require'dap'.repl.toggle()<cr>", "Toggle Repl"},
   }
 }
 

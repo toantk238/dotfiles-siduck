@@ -18,6 +18,9 @@ M.treesitter = {
 		"tsx",
 		"typescript",
 		"kotlin",
+    "python",
+    "java",
+    "ruby"
 	},
 }
 
