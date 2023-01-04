@@ -105,7 +105,9 @@ M.mason = {
 		-- python
 		"pyright",
 		"black",
-    "debugpy"
+    "debugpy",
+    -- markdown
+    "marksman"
 	},
 }
 
