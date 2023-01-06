@@ -20,7 +20,11 @@ M.treesitter = {
 		"kotlin",
     "python",
     "java",
-    "ruby"
+    "ruby",
+    "yaml",
+    "dockerfile",
+    "sql",
+    "swift"
 	},
 }
 
