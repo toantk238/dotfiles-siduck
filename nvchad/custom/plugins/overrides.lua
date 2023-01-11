@@ -98,6 +98,7 @@ M.mason = {
 		-- shell
 		"shfmt",
 		"shellcheck",
+    "bash-language-server",
 
 		-- xml
 		"lemminx",
