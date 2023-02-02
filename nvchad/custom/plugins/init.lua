@@ -130,7 +130,7 @@ return {
 		after = "nvim-dap",
 		opt = true,
 		config = function()
-      require("custom.plugins.nvim-dap-ui")
+			require("custom.plugins.nvim-dap-ui")
 		end,
 	},
 
@@ -150,6 +150,14 @@ return {
 		opt = true,
 		config = function()
 			require("custom.plugins.nvim-dap-python")
+		end,
+	},
+
+	["akinsho/git-conflict.nvim"] = {
+		after = "ui",
+		tag = "*",
+		config = function()
+			require("git-conflict").setup()
 		end,
 	},
 }

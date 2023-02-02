@@ -112,7 +112,10 @@ M.mason = {
 		"black",
     "debugpy",
     -- markdown
-    "marksman"
+    "marksman",
+    -- yaml
+    "yaml-language-server",
+    "yamlfmt"
 	},
 }
 

@@ -15,7 +15,8 @@ local servers = {
 	"solargraph",
 	"gradle_ls",
   "marksman",
-  "bashls"
+  "bashls",
+  "yamlls"
 }
 
 for _, lsp in ipairs(servers) do

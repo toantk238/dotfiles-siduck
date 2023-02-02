@@ -28,7 +28,9 @@ local sources = {
   -- ruby
   b.formatting.rubocop,
   -- xml
-  b.formatting.xmllint
+  b.formatting.xmllint,
+  -- yaml
+  b.formatting.yamlfmt
 }
 
 null_ls.setup {
