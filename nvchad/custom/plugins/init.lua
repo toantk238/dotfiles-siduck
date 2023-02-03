@@ -22,7 +22,7 @@ return {
 	},
 
 	-- override default configs
-	["kyazdani42/nvim-tree.lua"] = { override_options = overrides.nvimtree },
+	["nvim-tree/nvim-tree.lua"] = { override_options = overrides.nvimtree },
 	["nvim-treesitter/nvim-treesitter"] = { override_options = overrides.treesitter },
 	["lukas-reineke/indent-blankline.nvim"] = { override_options = overrides.blankline },
 	["williamboman/mason.nvim"] = { override_options = overrides.mason },
@@ -158,6 +158,16 @@ return {
 		tag = "*",
 		config = function()
 			require("git-conflict").setup()
+		end,
+	},
+
+	["direnv/direnv.vim"] = {},
+
+	["johmsalas/text-case.nvim"] = {
+		after = "ui",
+		opt = true,
+		config = function ()
+      require('textcase').setup {}
 		end,
 	},
 }
