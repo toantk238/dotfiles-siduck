@@ -165,9 +165,7 @@ return {
 
 	["johmsalas/text-case.nvim"] = {
 		after = "ui",
-		opt = true,
 		config = function ()
-      require('textcase').setup {}
 		end,
 	},
 }
