@@ -155,7 +155,7 @@ return {
 
 	["akinsho/git-conflict.nvim"] = {
 		after = "ui",
-		tag = "*",
+		tag = "v1.0.0",
 		config = function()
 			require("git-conflict").setup()
 		end,
@@ -165,7 +165,21 @@ return {
 
 	["johmsalas/text-case.nvim"] = {
 		after = "ui",
-		config = function ()
+	},
+
+	["rmagatti/auto-session"] = {
+		after = "ui",
+		config = function()
+			require("auto-session").setup({
+				log_level = "error",
+				auto_session_suppress_dirs = { "~/", "~/Downloads", "/" },
+			})
 		end,
 	},
+  ["windwp/nvim-spectre"] = {
+    after = "ui",
+    config = function ()
+      require('spectre').setup()
+    end
+  }
 }

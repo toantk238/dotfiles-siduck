@@ -30,6 +30,7 @@ local sources = {
   -- xml
   b.formatting.xmllint,
   -- yaml
+  b.diagnostics.yamllint,
   b.formatting.yamlfmt
 }
 

@@ -24,17 +24,17 @@ M.treesitter = {
   },
 }
 
-M.shade = {
-  n = {
-    ["<leader>s"] = {
-      function()
-        require("shade").toggle()
-      end,
-
-      "toggle shade.nvim",
-    },
-  },
-}
+-- M.shade = {
+--   n = {
+--     ["<leader>s"] = {
+--       function()
+--         require("shade").toggle()
+--       end,
+-- 
+--       "toggle shade.nvim",
+--     },
+--   },
+-- }
 
 M.nvterm = {
   n = {
@@ -65,6 +65,13 @@ M.dap = {
     ["<leader>dh"] = {"<cmd>lua require'dap.ui.widgets'.hover()<cr>", "Hover Variables"},
     ["<leader>ep"] = {"<cmd>lua require'dapui'.eval(vim.fn.input '[Expression] > ')<cr>", "Evaluate Input"},
     ["<leader>de"] = {"<cmd>lua require'dap'.repl.toggle()<cr>", "Toggle Repl"},
+  }
+}
+
+M.spectre = {
+  n = {
+    ["<leader>s"] = {"<esc>:lua require('spectre').open_visual()<CR>", "Open Search"},
+    ["<leader>sw"] = {"<cmd>lua require('spectre').open_visual({select_word=true})<CR>", "Search word"},
   }
 }
 

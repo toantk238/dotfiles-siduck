@@ -115,7 +115,8 @@ M.mason = {
     "marksman",
     -- yaml
     "yaml-language-server",
-    "yamlfmt"
+    "yamlfmt",
+    "yamllint"
 	},
 }
 
