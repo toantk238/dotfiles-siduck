@@ -75,4 +75,11 @@ M.spectre = {
   }
 }
 
+M.camelcasemotion = {
+  n = {
+    ["fw"] = {"<Plug>CamelCaseMotion_w", "CamelCaseMotion : Jump to next word"},
+    ["fb"] = {"<Plug>CamelCaseMotion_b", "CamelCaseMotion : Jump back next word"},
+  }
+}
+
 return M

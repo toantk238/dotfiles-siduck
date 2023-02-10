@@ -176,10 +176,15 @@ return {
 			})
 		end,
 	},
-  ["windwp/nvim-spectre"] = {
-    after = "ui",
-    config = function ()
-      require('spectre').setup()
-    end
-  }
+
+	["windwp/nvim-spectre"] = {
+		after = "ui",
+		config = function()
+			require("spectre").setup()
+		end,
+	},
+
+	["tpope/vim-fugitive"] = {},
+
+	["bkad/CamelCaseMotion"] = {},
 }
