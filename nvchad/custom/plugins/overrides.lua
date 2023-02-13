@@ -109,7 +109,7 @@ M.mason = {
 
 		-- python
 		"pyright",
-		"black",
+		"autopep8",
     "debugpy",
     -- markdown
     "marksman",

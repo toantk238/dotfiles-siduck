@@ -24,7 +24,7 @@ local sources = {
   b.formatting.clang_format,
 
   -- python
-  b.formatting.black,
+  b.formatting.autopep8,
   -- ruby
   b.formatting.rubocop,
   -- xml
