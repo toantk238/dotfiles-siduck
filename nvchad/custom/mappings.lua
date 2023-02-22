@@ -83,4 +83,10 @@ M.camelcasemotion = {
   }
 }
 
+M.hop = {
+  n = {
+    ["<leader>ho"] = {":HopWord <CR>", "HopWord"}
+  }
+}
+
 return M

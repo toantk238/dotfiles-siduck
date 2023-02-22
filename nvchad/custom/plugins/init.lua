@@ -187,4 +187,13 @@ return {
 	["tpope/vim-fugitive"] = {},
 
 	["bkad/CamelCaseMotion"] = {},
+
+	["phaazon/hop.nvim"] = {
+		branch = "v2", -- optional but strongly recommended
+    cmd = "HopWord",
+		config = function()
+			-- you can configure Hop the way you like here; see :h hop-config
+			require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
+		end,
+	},
 }
