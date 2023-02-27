@@ -197,4 +197,9 @@ return {
 			require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
 		end,
 	},
+
+	["kdheepak/lazygit.nvim"] = {
+		branch = "main",
+		after = "ui",
+	},
 }
