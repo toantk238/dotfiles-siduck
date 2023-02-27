@@ -173,6 +173,7 @@ return {
 			require("auto-session").setup({
 				log_level = "error",
 				auto_session_suppress_dirs = { "~/", "~/Downloads", "/" },
+				post_restore_cmds = { "NvimTreeToggle" },
 			})
 		end,
 	},
@@ -190,7 +191,7 @@ return {
 
 	["phaazon/hop.nvim"] = {
 		branch = "v2", -- optional but strongly recommended
-    cmd = "HopWord",
+		cmd = "HopWord",
 		config = function()
 			-- you can configure Hop the way you like here; see :h hop-config
 			require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })

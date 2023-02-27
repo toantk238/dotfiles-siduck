@@ -31,7 +31,7 @@ M.treesitter = {
 M.nvimtree = {
 	filters = {
 		dotfiles = true,
-		custom = { "node_modules" },
+		custom = { "node_modules", "js" },
 	},
 
 	git = {

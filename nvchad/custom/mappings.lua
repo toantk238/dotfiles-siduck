@@ -89,4 +89,10 @@ M.hop = {
   }
 }
 
+M.zenmode = {
+  n = {
+    ["<leader>ze"] = {":ZenMode <CR>", "Toggle ZenMode"}
+  }
+}
+
 return M
