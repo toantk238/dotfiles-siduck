@@ -14,9 +14,9 @@ local servers = {
 	"lemminx",
 	"solargraph",
 	"gradle_ls",
-  "marksman",
-  "bashls",
-  "yamlls"
+	"marksman",
+	"bashls",
+	"yamlls",
 }
 
 for _, lsp in ipairs(servers) do
@@ -25,6 +25,13 @@ for _, lsp in ipairs(servers) do
 		capabilities = capabilities,
 	})
 end
+
+
+lspconfig.kotlin_language_server.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+  root_dir=lspconfig.util.root_pattern("settings.gradle", "settings.gradle.kts")
+})
 
 local java_17_home = os.getenv("JAVA_17_HOME")
 if java_17_home then
