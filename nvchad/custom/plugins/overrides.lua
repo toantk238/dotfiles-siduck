@@ -116,7 +116,9 @@ M.mason = {
     -- yaml
     "yaml-language-server",
     "yamlfmt",
-    "yamllint"
+    "yamllint",
+    -- kotlin
+    "kotlin-language-server"
 	},
 }
 

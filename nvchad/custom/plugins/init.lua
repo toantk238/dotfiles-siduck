@@ -199,6 +199,7 @@ return {
 	},
 
 	["kdheepak/lazygit.nvim"] = {
+		cmd = "LazyGit",
 		branch = "main",
 		after = "ui",
 	},
