@@ -17,8 +17,8 @@ local sources = {
   b.formatting.stylua,
 
   -- Shell
-  b.formatting.shfmt,
-  b.diagnostics.shellcheck.with { diagnostics_format = "#{m} [#{c}]" },
+  -- b.formatting.shfmt,
+  -- b.diagnostics.shellcheck.with { diagnostics_format = "#{m} [#{c}]" },
 
   -- cpp
   b.formatting.clang_format,
@@ -31,7 +31,7 @@ local sources = {
   b.formatting.xmllint,
   -- yaml
   -- b.diagnostics.yamllint,
-  -- b.formatting.yamlfmt
+  b.formatting.yamlfmt
 }
 
 null_ls.setup {

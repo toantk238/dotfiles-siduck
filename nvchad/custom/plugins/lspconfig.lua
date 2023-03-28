@@ -9,13 +9,12 @@ local servers = {
 	"jsonls",
 	"tsserver",
 	"tailwindcss",
-	"bashls",
+	-- "bashls",
 	"pyright",
 	"lemminx",
 	"solargraph",
 	-- "gradle_ls",
 	"marksman",
-	"bashls",
 	"yamlls",
 }
 
