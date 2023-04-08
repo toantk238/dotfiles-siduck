@@ -40,4 +40,57 @@ M.nvterm = {
   },
 }
 
+M.tagbar = {
+	n = {
+		["<F7>"] = { ":TagbarToggle <CR>", "toggle Tag Bar" },
+	},
+}
+
+M.dap = {
+	n = {
+		["<F5>"] = { "<cmd>lua require'dap'.continue()<cr>", "Start Debug" },
+		["<F8>"] = { "<cmd>lua require'dap'.step_into()<cr>", "Step Into" },
+		["<F12>"] = { "<cmd>lua require'dap'.step_out()<cr>", "Step Out" },
+		["<F9>"] = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" },
+		["<F3>"] = { "<cmd>lua require'dap'.terminate()<cr>", "Terminate" },
+		["<leader>du"] = { "<cmd>lua require'dapui'.toggle()<cr>", "Toggle UI" },
+		["<leader>dh"] = { "<cmd>lua require'dap.ui.widgets'.hover()<cr>", "Hover Variables" },
+		["<leader>ep"] = { "<cmd>lua require'dapui'.eval(vim.fn.input '[Expression] > ')<cr>", "Evaluate Input" },
+		["<leader>de"] = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Toggle Repl" },
+	},
+}
+
+M.spectre = {
+	n = {
+		["<leader>s"] = { "<esc>:lua require('spectre').open_visual()<CR>", "Open Search" },
+		["<leader>sw"] = { "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", "Search word" },
+	},
+}
+
+M.camelcasemotion = {
+	n = {
+		["fw"] = { "<Plug>CamelCaseMotion_w", "CamelCaseMotion : Jump to next word" },
+		["fb"] = { "<Plug>CamelCaseMotion_b", "CamelCaseMotion : Jump back next word" },
+		["fe"] = { "<Plug>CamelCaseMotion_e", "CamelCaseMotion : Jump back next word" },
+	},
+}
+
+M.hop = {
+	n = {
+		["<leader>ho"] = { ":HopWord <CR>", "HopWord" },
+	},
+}
+
+M.zenmode = {
+	n = {
+		["<leader>ze"] = { ":ZenMode <CR>", "Toggle ZenMode" },
+	},
+}
+
+M.lazygit = {
+	n = {
+		["<leader>lz"] = { ":LazyGit <CR>", "Open LazyGit" },
+	},
+}
+
 return M
