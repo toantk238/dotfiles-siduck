@@ -1,5 +1,5 @@
 require("custom.commands")
-require("custom.autocmds")
+-- require("custom.autocmds")
 
 vim.opt.title = true
 

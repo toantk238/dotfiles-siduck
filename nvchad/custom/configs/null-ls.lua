@@ -14,8 +14,8 @@ local sources = {
 	format.stylua,
 
 	-- Shell
-	format.shfmt,
-	lint.shellcheck.with({ diagnostics_format = "#{m} [#{c}]" }),
+	-- format.shfmt,
+	-- lint.shellcheck.with({ diagnostics_format = "#{m} [#{c}]" }),
 
 	-- cpp
 	format.clang_format,

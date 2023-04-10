@@ -4,7 +4,7 @@ local M = {}
 M.plugins = "custom.plugins" -- path for lazy.nvim
 
 M.ui = {
-theme='everforest',
+theme='monekai',
   -- transparency = true,
 
   -- tabufline = {

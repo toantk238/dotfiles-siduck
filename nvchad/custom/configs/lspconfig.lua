@@ -9,7 +9,7 @@ local servers = {
 	"jsonls",
 	"tsserver",
 	"unocss",
-	"bashls",
+	-- "bashls",
 	"pyright",
 	"lemminx",
 	"solargraph",
