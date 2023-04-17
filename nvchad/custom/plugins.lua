@@ -146,10 +146,12 @@ return {
 		config = function()
 			require("git-conflict").setup()
 		end,
+    lazy = false
 	},
 
 	{
 		"direnv/direnv.vim",
+    lazy = false
 	},
 
 	{
@@ -181,7 +183,8 @@ return {
 	},
 
 	{
-		"bkad/CamelCaseMotion",
+		"chaoren/vim-wordmotion",
+    lazy = false
 	},
 
 	{

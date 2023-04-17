@@ -67,14 +67,6 @@ M.spectre = {
 	},
 }
 
-M.camelcasemotion = {
-	n = {
-		["fw"] = { "<Plug>CamelCaseMotion_w", "CamelCaseMotion : Jump to next word" },
-		["fb"] = { "<Plug>CamelCaseMotion_b", "CamelCaseMotion : Jump back next word" },
-		["fe"] = { "<Plug>CamelCaseMotion_e", "CamelCaseMotion : Jump back next word" },
-	},
-}
-
 M.hop = {
 	n = {
 		["<leader>ho"] = { ":HopWord <CR>", "HopWord" },
