@@ -146,12 +146,12 @@ return {
 		config = function()
 			require("git-conflict").setup()
 		end,
-    lazy = false
+		lazy = false,
 	},
 
 	{
 		"direnv/direnv.vim",
-    lazy = false
+		lazy = false,
 	},
 
 	{
@@ -168,6 +168,7 @@ return {
 				post_restore_cmds = { "NvimTreeToggle" },
 			})
 		end,
+		lazy = false,
 	},
 
 	{
@@ -180,11 +181,12 @@ return {
 
 	{
 		"tpope/vim-fugitive",
+		lazy = false,
 	},
 
 	{
 		"chaoren/vim-wordmotion",
-    lazy = false
+		lazy = false,
 	},
 
 	{
@@ -202,5 +204,18 @@ return {
 		cmd = "LazyGit",
 		branch = "main",
 		-- after = "ui",
+	},
+
+	{
+		"axkirillov/easypick.nvim",
+		lazy = false,
+	},
+
+	{
+		"axkirillov/telescope-changed-files",
+		config = function()
+			require("telescope").load_extension("changed_files")
+		end,
+    lazy = false
 	},
 }

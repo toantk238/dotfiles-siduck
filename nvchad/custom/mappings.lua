@@ -1,43 +1,43 @@
 local M = {}
 
 M.general = {
-  n = {
-    [";"] = { ":", "command mode", opts = { nowait = true } },
-  },
+	n = {
+		[";"] = { ":", "command mode", opts = { nowait = true } },
+	},
 
-  i = {
-    ["jk"] = { "<ESC>", "escape insert mode" },
-  },
+	i = {
+		["jk"] = { "<ESC>", "escape insert mode" },
+	},
 }
 
 M.treesitter = {
-  n = {
-    ["<leader>cu"] = { "<cmd> TSCaptureUnderCursor <CR>", "find media" },
-  },
+	n = {
+		["<leader>cu"] = { "<cmd> TSCaptureUnderCursor <CR>", "find media" },
+	},
 }
 
 M.shade = {
-  n = {
-    ["<Bslash>"] = {
-      function()
-        require("shade").toggle()
-      end,
+	n = {
+		["<Bslash>"] = {
+			function()
+				require("shade").toggle()
+			end,
 
-      "toggle shade.nvim",
-    },
-  },
+			"toggle shade.nvim",
+		},
+	},
 }
 
 M.nvterm = {
-  n = {
-    ["<leader>gc"] = {
-      function()
-        require("nvterm.terminal").send("clear && g++ -o out " .. vim.fn.expand "%" .. " && ./out", "vertical")
-      end,
+	n = {
+		["<leader>gc"] = {
+			function()
+				require("nvterm.terminal").send("clear && g++ -o out " .. vim.fn.expand("%") .. " && ./out", "vertical")
+			end,
 
-      "compile & run a cpp file",
-    },
-  },
+			"compile & run a cpp file",
+		},
+	},
 }
 
 M.tagbar = {
@@ -82,6 +82,12 @@ M.zenmode = {
 M.lazygit = {
 	n = {
 		["<leader>lz"] = { ":LazyGit <CR>", "Open LazyGit" },
+	},
+}
+
+M.telescope_changed_files = {
+	n = {
+		["<leader>cf"] = { ":Telescope changed_files <cr>", "Open changed files" },
 	},
 }
 
