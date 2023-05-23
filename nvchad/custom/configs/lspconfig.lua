@@ -10,7 +10,7 @@ local servers = {
 	"tsserver",
 	"unocss",
 	-- "bashls",
-	"pyright",
+	-- "pyright",
 	"lemminx",
 	"solargraph",
 	-- "gradle_ls",
@@ -24,6 +24,18 @@ for _, lsp in ipairs(servers) do
 		capabilities = capabilities,
 	})
 end
+
+lspconfig.pyright.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    python = {
+      analysis = {
+        typeCheckingMode = "off"
+      }
+    }
+  }
+})
 
 -- lspconfig.kotlin_language_server.setup({
 -- 	on_attach = on_attach,

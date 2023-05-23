@@ -184,10 +184,10 @@ return {
 		lazy = false,
 	},
 
-	{
-		"chaoren/vim-wordmotion",
-		lazy = false,
-	},
+	--{
+	--	"chaoren/vim-wordmotion",
+	--	lazy = false,
+	--},
 
 	{
 		"phaazon/hop.nvim",
