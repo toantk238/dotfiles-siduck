@@ -71,8 +71,6 @@ M.mason = {
 		"clangd",
 		"clang-format",
 
-		-- python
-		"pyright",
 		-- xml
 		"lemminx",
 

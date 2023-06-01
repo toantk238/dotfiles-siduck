@@ -3,26 +3,25 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 
 local lspconfig = require("lspconfig")
 local servers = {
-	"html",
-	"cssls",
-	"clangd",
-	"jsonls",
-	"tsserver",
-	"unocss",
-	-- "bashls",
-	-- "pyright",
-	"lemminx",
-	"solargraph",
-	-- "gradle_ls",
-	"marksman",
-	"yamlls",
+  "html",
+  "cssls",
+  "clangd",
+  "jsonls",
+  "tsserver",
+  "unocss",
+  -- "bashls",
+  -- "pyright",
+  "lemminx",
+  -- "gradle_ls",
+  "marksman",
+  "yamlls",
 }
 
 for _, lsp in ipairs(servers) do
-	lspconfig[lsp].setup({
-		on_attach = on_attach,
-		capabilities = capabilities,
-	})
+  lspconfig[lsp].setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+  })
 end
 
 lspconfig.pyright.setup({
@@ -31,10 +30,20 @@ lspconfig.pyright.setup({
   settings = {
     python = {
       analysis = {
-        typeCheckingMode = "off"
-      }
-    }
-  }
+        typeCheckingMode = "off",
+      },
+    },
+  },
+})
+
+lspconfig.solargraph.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    solargraph = {
+      diagnostics = false,
+    },
+  },
 })
 
 -- lspconfig.kotlin_language_server.setup({
