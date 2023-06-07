@@ -218,4 +218,14 @@ return {
     end,
     lazy = false,
   },
+
+  {
+    "neoclide/coc.nvim",
+    lazy = false,
+    branch = "release",
+  },
+  {
+    "dart-lang/dart-vim-plugin",
+    lazy = false,
+  },
 }
