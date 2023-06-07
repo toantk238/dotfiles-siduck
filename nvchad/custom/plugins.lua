@@ -228,4 +228,12 @@ return {
     "dart-lang/dart-vim-plugin",
     lazy = false,
   },
+  {
+    "natebosch/vim-lsc",
+    lazy = false,
+  },
+  {
+    "natebosch/vim-lsc-dart",
+    lazy = false,
+  },
 }
