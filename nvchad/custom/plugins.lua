@@ -219,13 +219,13 @@ return {
     lazy = false,
   },
   {
-    "dart-lang/dart-vim-plugin",
+    "neoclide/coc.nvim",
+    branch = "release",
+    ft = { "dart", "lua" },
     lazy = true,
-    ft = { "dart" },
     dependencies = {
       {
-        "neoclide/coc.nvim",
-        branch = "release",
+        "dart-lang/dart-vim-plugin"
       },
       {
         "natebosch/vim-lsc",
