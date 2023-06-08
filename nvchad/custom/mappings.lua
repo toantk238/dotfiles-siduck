@@ -112,6 +112,7 @@ M.coc = {
     ["gi"] = { "<Plug>(coc-implementation)" },
     ["gr"] = { "<Plug>(coc-references)" },
     ["<leader>fm"] = { "<cmd>call CocActionAsync('format')<CR>" },
+    ["<leader>ca"] = { "<Plug>(coc-codeaction-cursor)" }
   },
 }
 
