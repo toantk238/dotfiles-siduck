@@ -218,22 +218,24 @@ return {
     end,
     lazy = false,
   },
-
-  {
-    "neoclide/coc.nvim",
-    lazy = true,
-    branch = "release",
-  },
   {
     "dart-lang/dart-vim-plugin",
     lazy = true,
-  },
-  {
-    "natebosch/vim-lsc",
-    lazy = true,
-  },
-  {
-    "natebosch/vim-lsc-dart",
-    lazy = true,
+    ft = { "dart" },
+    dependencies = {
+      {
+        "neoclide/coc.nvim",
+        branch = "release",
+      },
+      {
+        "natebosch/vim-lsc",
+      },
+      {
+        "natebosch/vim-lsc-dart",
+      },
+    },
+    config = function()
+      require("core.utils").load_mappings("coc")
+    end,
   },
 }

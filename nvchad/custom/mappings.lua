@@ -91,33 +91,23 @@ M.telescope_changed_files = {
   },
 }
 
-M.coc = {
-  plugin = true,
-  n = {
-    ["K"] = {
-      function()
-        local cw = vim.fn.expand("<cword>")
-        if vim.fn.index({ "vim", "help" }, vim.bo.filetype) >= 0 then
-          vim.api.nvim_command("h " .. cw)
-        elseif vim.api.nvim_eval("coc#rpc#ready()") then
-          vim.fn.CocActionAsync("doHover")
-        else
-          vim.api.nvim_command("!" .. vim.o.keywordprg .. " " .. cw)
-        end
-      end,
-    },
-    ["gd"] = { " <cmd>call CocActionAsync('jumpDefinition')<CR>" },
-  },
-}
-
-M.lazy_plugins = {
-  n = {
-    ["<leader>lf"] = {
-      function()
-        require("core.utils").load_mappings("coc")
-      end,
-    },
-  },
-}
+--M.coc = {
+--  plugin = true,
+--  n = {
+--    ["K"] = {
+--      function()
+--        local cw = vim.fn.expand("<cword>")
+--        if vim.fn.index({ "vim", "help" }, vim.bo.filetype) >= 0 then
+--          vim.api.nvim_command("h " .. cw)
+--        elseif vim.api.nvim_eval("coc#rpc#ready()") then
+--          vim.fn.CocActionAsync("doHover")
+--        else
+--          vim.api.nvim_command("!" .. vim.o.keywordprg .. " " .. cw)
+--        end
+--      end,
+--    },
+--    ["gd"] = { " <cmd>call CocActionAsync('jumpDefinition')<CR>" },
+--  },
+--}
 
 return M
