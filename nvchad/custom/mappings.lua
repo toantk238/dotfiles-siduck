@@ -110,4 +110,14 @@ M.coc = {
   },
 }
 
+M.lazy_plugins = {
+  n = {
+    ["<leader>lf"] = {
+      function()
+        require("core.utils").load_mappings("coc")
+      end,
+    },
+  },
+}
+
 return M

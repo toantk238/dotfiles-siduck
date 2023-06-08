@@ -221,19 +221,19 @@ return {
 
   {
     "neoclide/coc.nvim",
-    lazy = false,
+    lazy = true,
     branch = "release",
   },
   {
     "dart-lang/dart-vim-plugin",
-    lazy = false,
+    lazy = true,
   },
   {
     "natebosch/vim-lsc",
-    lazy = false,
+    lazy = true,
   },
   {
     "natebosch/vim-lsc-dart",
-    lazy = false,
+    lazy = true,
   },
 }
