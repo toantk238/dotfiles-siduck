@@ -221,7 +221,7 @@ return {
   {
     "neoclide/coc.nvim",
     branch = "release",
-    ft = { "dart", "lua" },
+    ft = { "dart" },
     lazy = true,
     dependencies = {
       {
