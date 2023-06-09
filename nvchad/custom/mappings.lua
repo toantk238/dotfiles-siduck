@@ -91,29 +91,4 @@ M.telescope_changed_files = {
   },
 }
 
--- Comment this M.coc to allow LSP keyBindings works
-M.coc = {
-  plugin = true,
-  n = {
-    ["K"] = {
-      function()
-        local cw = vim.fn.expand("<cword>")
-        if vim.fn.index({ "vim", "help" }, vim.bo.filetype) >= 0 then
-          vim.api.nvim_command("h " .. cw)
-        elseif vim.api.nvim_eval("coc#rpc#ready()") then
-          vim.fn.CocActionAsync("doHover")
-        else
-          vim.api.nvim_command("!" .. vim.o.keywordprg .. " " .. cw)
-        end
-      end,
-    },
-    ["gd"] = { "<Plug>(coc-definition)" },
-    ["gy"] = { "<Plug>(coc-type-definition)" },
-    ["gi"] = { "<Plug>(coc-implementation)" },
-    ["gr"] = { "<Plug>(coc-references)" },
-    ["<leader>fm"] = { "<cmd>call CocActionAsync('format')<CR>" },
-    ["<leader>ca"] = { "<Plug>(coc-codeaction-cursor)" }
-  },
-}
-
 return M
