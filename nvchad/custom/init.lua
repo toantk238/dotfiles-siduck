@@ -35,6 +35,7 @@ vim.filetype.add({
     ["Pluginfile"] = "ruby",
     ["Jenkinsfile.*"] = "groovy",
     [".envrc.*"] = "bash",
+    ["Dockerfile.*"] = "dockerfile",
   },
 })
 

@@ -20,7 +20,7 @@ local sources = {
 	format.stylua,
 
 	-- Shell
-	-- format.shfmt,
+	format.shfmt,
 	-- lint.shellcheck.with({ diagnostics_format = "#{m} [#{c}]" }),
 
 	-- cpp
@@ -32,7 +32,9 @@ local sources = {
 		generator_opts = {
 			command = "autopep8",
 			args = h.range_formatting_args_factory({
-				"-", "--max-line-length", "120"
+				"-",
+				"--max-line-length",
+				"120",
 			}, "--line-range", nil, { use_rows = true }),
 			to_stdin = true,
 		},

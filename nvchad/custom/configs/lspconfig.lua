@@ -47,6 +47,12 @@ lspconfig.solargraph.setup({
 	},
 })
 
+lspconfig.bashls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	filetypes = { "sh", "bash" },
+})
+
 -- lspconfig.kotlin_language_server.setup({
 -- 	on_attach = on_attach,
 -- 	capabilities = capabilities,
