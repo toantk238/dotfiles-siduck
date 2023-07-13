@@ -156,6 +156,10 @@ return {
 
 	{
 		"johmsalas/text-case.nvim", -- after = "ui",
+		config = function()
+			-- require("textcase").setup({})
+		end,
+    lazy = false
 	},
 
 	{
@@ -258,6 +262,7 @@ return {
 			{ "gr", "<Plug>(coc-references)" },
 			{ "<leader>fm", "<cmd>call CocActionAsync('format')<CR>" },
 			{ "<leader>ca", "<Plug>(coc-codeaction-cursor)" },
+			{ "<leader>ra", "<Plug>(coc-rename)" },
 		},
 	},
 }
