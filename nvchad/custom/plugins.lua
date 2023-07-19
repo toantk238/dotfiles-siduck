@@ -159,7 +159,7 @@ return {
 		config = function()
 			-- require("textcase").setup({})
 		end,
-    lazy = false
+		lazy = false,
 	},
 
 	{
@@ -239,7 +239,15 @@ return {
 			},
 		},
 		config = function()
-      require("custom.configs.coc")
+			require("custom.configs.coc")
+		end,
+	},
+	{
+		"folke/neodev.nvim",
+		ft = { "lua" },
+		lazy = true,
+		config = function()
+			require("neodev").setup({})
 		end,
 	},
 }
