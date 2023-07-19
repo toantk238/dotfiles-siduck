@@ -97,7 +97,7 @@ M.textcase = {
 			"<esc>:lua require('textcase').current_word('to_snake_case')<CR>",
 			"Convert current word to snake case",
 		},
-	}
+	},
 }
 
 return M
