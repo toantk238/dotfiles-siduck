@@ -50,8 +50,12 @@ function _G.format_buffer()
 	vim.fn.CocActionAsync("format")
 end
 keyset("n", "<leader>fm", "<CMD>lua _G.format_buffer()<CR>", { silent = true })
+function _G.orgranize_imports()
+	vim.fn.CocActionAsync("runCommand", "editor.action.organizeImport")
+end
+keyset("n", "<leader>fi", "<CMD>lua _G.orgranize_imports()<CR>", { silent = true })
 -- Remap keys for apply refactor code actions.
-keyset("n", "<leader>ca", "<Plug>(coc-codeaction-refactor)", { silent = true })
+keyset("n", "<leader>ca", "<Plug>(coc-codeaction-cursor)", opts)
 -- keyset("x", "<leader>r", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
 -- keyset("n", "<leader>r", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
 
