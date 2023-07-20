@@ -40,15 +40,20 @@ vim.api.nvim_create_autocmd("CursorHold", {
 	desc = "Highlight symbol under cursor on CursorHold",
 })
 
--- Symbol renaming
-keyset("n", "<leader>rn", "<Plug>(coc-rename)", { silent = true })
+keyset("n", "<leader>ra", "<Plug>(coc-rename)", { silent = true })
 
+local opts = { silent = true, nowait = true }
+-- Symbol renaming
 keyset("n", "<leader>qf", "<Plug>(coc-fix-current)", opts)
 
+function _G.format_buffer()
+	vim.fn.CocActionAsync("format")
+end
+keyset("n", "<leader>fm", "<CMD>lua _G.format_buffer()<CR>", { silent = true })
 -- Remap keys for apply refactor code actions.
-keyset("n", "<leader>re", "<Plug>(coc-codeaction-refactor)", { silent = true })
-keyset("x", "<leader>r", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
-keyset("n", "<leader>r", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
+keyset("n", "<leader>ca", "<Plug>(coc-codeaction-refactor)", { silent = true })
+-- keyset("x", "<leader>r", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
+-- keyset("n", "<leader>r", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
 
 keyset("n", "<leader>cl", "<Plug>(coc-codelens-action)", opts)
 
@@ -61,3 +66,10 @@ keyset("i", "<C-f>", 'coc#float#has_scroll() ? "<c-r>=coc#float#scroll(1)<cr>" :
 keyset("i", "<C-b>", 'coc#float#has_scroll() ? "<c-r>=coc#float#scroll(0)<cr>" : "<Left>"', opts)
 keyset("v", "<C-f>", 'coc#float#has_scroll() ? coc#float#scroll(1) : "<C-f>"', opts)
 keyset("v", "<C-b>", 'coc#float#has_scroll() ? coc#float#scroll(0) : "<C-b>"', opts)
+
+keyset("n", "<C-d>", 'coc#float#has_scroll() ? coc#float#scroll(1,10) : "<C-d>"', opts)
+keyset("n", "<C-u>", 'coc#float#has_scroll() ? coc#float#scroll(0,10) : "<C-u>"', opts)
+keyset("i", "<C-d>", 'coc#float#has_scroll() ? "<c-r>=coc#float#scroll(1,10)<cr>" : "<Right>"', opts)
+keyset("i", "<C-u>", 'coc#float#has_scroll() ? "<c-r>=coc#float#scroll(0, 10)<cr>" : "<Left>"', opts)
+keyset("v", "<C-d>", 'coc#float#has_scroll() ? coc#float#scroll(1,10) : "<C-d>"', opts)
+keyset("v", "<C-u>", 'coc#float#has_scroll() ? coc#float#scroll(0,10) : "<C-u>"', opts)
