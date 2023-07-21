@@ -6,13 +6,42 @@ local lint = null_ls.builtins.diagnostics
 local h = require("null-ls.helpers")
 local methods = require("null-ls.methods")
 
+local extensions = {
+	javascript = "js",
+	javascriptreact = "jsx",
+	json = "json",
+	jsonc = "jsonc",
+	markdown = "md",
+	typescript = "ts",
+	typescriptreact = "tsx",
+}
+
 local FORMATTING = methods.internal.FORMATTING
 local RANGE_FORMATTING = methods.internal.RANGE_FORMATTING
 
 local sources = {
 
 	-- webdev stuff
-	format.deno_fmt,
+	format.deno_fmt.with({
+		method = FORMATTING,
+		generator_opts = {
+			command = "deno",
+			args = function(params)
+				return { "fmt", "-", "--line-width", "120", "--ext", extensions[params.ft] }
+			end,
+			to_stdin = true,
+		},
+		factory = h.formatter_factory,
+		filetypes = {
+			"javascript",
+			"javascriptreact",
+			"json",
+			"jsonc",
+			"markdown",
+			"typescript",
+			"typescriptreact",
+		},
+	}),
 	-- b.formatting.prettier,
 	format.prettier.with({ filetypes = { "html", "markdown", "css" } }),
 
