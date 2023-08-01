@@ -16,6 +16,7 @@ local servers = {
 	-- "gradle_ls",
 	"marksman",
 	"yamlls",
+  "cucumber_language_server"
 }
 
 for _, lsp in ipairs(servers) do
@@ -51,7 +52,7 @@ lspconfig.solargraph.setup({
 lspconfig.bashls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
-	filetypes = { "bash" },
+	filetypes = { "sh" },
 })
 
 -- lspconfig.kotlin_language_server.setup({

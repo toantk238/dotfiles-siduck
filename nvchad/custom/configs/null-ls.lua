@@ -15,7 +15,7 @@ local sources = {
 	format.stylua,
 
 	-- Shell
-	format.shfmt.with({ filetypes = { "bash" } }),
+	format.shfmt.with({ filetypes = { "sh" } }),
 	-- lint.shellcheck.with({ diagnostics_format = "#{m} [#{c}]" }),
 
 	-- cpp
