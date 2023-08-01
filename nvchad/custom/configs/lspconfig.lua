@@ -16,7 +16,7 @@ local servers = {
 	-- "gradle_ls",
 	"marksman",
 	"yamlls",
-  "cucumber_language_server"
+	-- "cucumber_language_server"
 }
 
 for _, lsp in ipairs(servers) do
@@ -53,6 +53,22 @@ lspconfig.bashls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 	filetypes = { "sh" },
+})
+
+lspconfig.cucumber_language_server.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	filetypes = { "cucumber", "feature" },
+	root_dir = lspconfig.util.find_git_ancestor,
+	settings = {
+		cucumber = {
+			features = { "features/**/*.feature" },
+			glue = { "features/**/*.ts", "features/**/*.tsx", "features/**/*.js", "features/**/*.jsx" },
+			parameterTypes = {},
+			snippetTemplates = {},
+		},
+	},
+	cmd = { "cucumber-language-server.cjs", "--stdio" },
 })
 
 -- lspconfig.kotlin_language_server.setup({
