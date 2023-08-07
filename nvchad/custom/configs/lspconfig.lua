@@ -68,7 +68,7 @@ lspconfig.cucumber_language_server.setup({
 			snippetTemplates = {},
 		},
 	},
-	cmd = { "cucumber-language-server.cjs", "--stdio" },
+	cmd = { "cucumber-language-server", "--stdio" },
 })
 
 -- lspconfig.kotlin_language_server.setup({
