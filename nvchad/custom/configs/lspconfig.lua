@@ -62,8 +62,8 @@ lspconfig.cucumber_language_server.setup({
 	root_dir = lspconfig.util.find_git_ancestor,
 	settings = {
 		cucumber = {
-			features = { "features/**/*.feature" },
-			glue = { "features/**/*.ts", "features/**/*.tsx", "features/**/*.js", "features/**/*.jsx" },
+			features = { "./src/**/*.feature" },
+			glue = { "./src/**/*.ts", "./src/**/*.tsx", "./src/**/*.js", "./src/**/*.jsx" },
 			parameterTypes = {},
 			snippetTemplates = {},
 		},

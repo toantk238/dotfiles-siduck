@@ -35,3 +35,19 @@ null_ls.setup({
 	debug = true,
 	sources = sources,
 })
+
+local cucumber_formatter = {
+	name = "cucumber_formatter",
+	method = null_ls.methods.FORMATTING,
+	filetypes = { "cucumber" },
+	generator = null_ls.formatter({
+		command = "vim-gherkin-formatter",
+		args = {
+			"$FILENAME",
+		},
+		to_stdin = true,
+		from_stderr = true,
+	}),
+}
+
+null_ls.register(cucumber_formatter)
