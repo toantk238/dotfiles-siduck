@@ -173,7 +173,7 @@ return {
 			})
 		end,
 		lazy = false,
-    -- cmd = "SessionRestore"
+		-- cmd = "SessionRestore"
 	},
 
 	{
@@ -249,6 +249,7 @@ return {
 		lazy = true,
 		config = function()
 			require("neodev").setup({})
+			require("custom.configs.lspconfig-lua")
 		end,
 	},
 }

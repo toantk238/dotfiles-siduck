@@ -9,7 +9,7 @@ local servers = {
 	"jsonls",
 	"tsserver",
 	"unocss",
-	"lua_ls",
+	-- "lua_ls",
 	-- "bashls",
 	-- "pyright",
 	"lemminx",
@@ -70,6 +70,7 @@ lspconfig.cucumber_language_server.setup({
 	},
 	cmd = { "cucumber-language-server", "--stdio" },
 })
+
 
 -- lspconfig.kotlin_language_server.setup({
 -- 	on_attach = on_attach,
