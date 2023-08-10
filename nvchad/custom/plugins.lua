@@ -173,6 +173,7 @@ return {
 			})
 		end,
 		lazy = false,
+    -- cmd = "SessionRestore"
 	},
 
 	{

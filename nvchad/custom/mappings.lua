@@ -100,4 +100,13 @@ M.textcase = {
 	},
 }
 
+M.lsp = {
+	n = {
+		["<leader>lr"] = {
+			"<cmd>LspRestart<CR>",
+			"Restart LSP",
+		},
+	},
+}
+
 return M

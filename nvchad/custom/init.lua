@@ -36,6 +36,7 @@ vim.filetype.add({
 		["Jenkinsfile.*"] = "groovy",
 		[".envrc.*"] = "bash",
 		["Dockerfile.*"] = "dockerfile",
+    [".*appiumsession.*"] = "json"
 	},
 })
 

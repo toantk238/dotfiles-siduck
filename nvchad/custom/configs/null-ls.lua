@@ -28,7 +28,7 @@ local sources = {
 	format.xmllint,
 	-- yaml
 	-- b.diagnostics.yamllint,
-	format.yamlfmt,
+	-- format.yamlfmt,
 }
 
 null_ls.setup({
