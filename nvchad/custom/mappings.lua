@@ -3,6 +3,7 @@ local M = {}
 M.general = {
 	n = {
 		[";"] = { ":", "command mode", opts = { nowait = true } },
+		["<leader>me"] = { ":%bd|e#<CR>", "Close all but this buffer" },
 	},
 
 	i = {
