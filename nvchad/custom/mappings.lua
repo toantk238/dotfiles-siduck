@@ -83,6 +83,7 @@ M.zenmode = {
 M.lazygit = {
 	n = {
 		["<leader>lg"] = { ":LazyGit <CR>", "Open LazyGit" },
+		["<leader>lf"] = { ":Neogit <CR>", "Open Neogit" },
 	},
 }
 
