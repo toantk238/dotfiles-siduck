@@ -47,6 +47,7 @@ local cucumber_formatter = {
 		},
 		to_stdin = true,
 		from_stderr = true,
+		to_temp_file = true,
 	}),
 }
 
