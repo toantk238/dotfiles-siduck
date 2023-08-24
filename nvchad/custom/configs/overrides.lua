@@ -30,7 +30,7 @@ M.treesitter = {
 M.nvimtree = {
 	filters = {
 		dotfiles = true,
-		custom = { "node_modules" },
+		custom = { "node_modules", ".git" },
 	},
 
 	git = {
@@ -90,6 +90,25 @@ M.mason = {
 		"yamllint",
 		-- kotlin
 		-- "kotlin-language-server"
+	},
+}
+
+M.telescope = {
+	defaults = {
+		file_ignore_patterns = { "node_modules", ".git" },
+		vimgrep_arguments = {
+			"rg",
+			"--hidden",
+			"-L",
+			"--color=never",
+			"--no-heading",
+			"--with-filename",
+			"--line-number",
+			"--column",
+			"--smart-case",
+			"-g",
+			"!{jquery,bootstrap,font-awesome,js}",
+		},
 	},
 }
 

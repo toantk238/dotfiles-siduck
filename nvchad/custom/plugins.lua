@@ -39,6 +39,7 @@ return {
 	{ "nvim-tree/nvim-tree.lua", opts = overrides.nvimtree },
 	{ "nvim-treesitter/nvim-treesitter", opts = overrides.treesitter },
 	{ "williamboman/mason.nvim", opts = overrides.mason },
+	{ "nvim-telescope/telescope.nvim", opts = overrides.telescope },
 
 	--------------------------------------------- custom plugins ----------------------------------------------
 
@@ -159,7 +160,7 @@ return {
 		config = function()
 			-- require("textcase").setup({})
 		end,
-		lazy = false,
+		lazy = true,
 	},
 
 	{
