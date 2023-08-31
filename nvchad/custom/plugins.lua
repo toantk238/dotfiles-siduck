@@ -111,35 +111,35 @@ return {
 	{
 		"mfussenegger/nvim-dap",
 		ft = { "python" },
-	},
+		lazy = true,
+		dependencies = {
+			{
+				"rcarriga/nvim-dap-ui",
+				-- after = "nvim-dap",
+				config = function()
+					require("custom.configs.nvim-dap-ui")
+				end,
+			},
+			{
+				"theHamsta/nvim-dap-virtual-text",
+				-- after = "nvim-dap",
+				config = function()
+					local dap_virtual_text = require("nvim-dap-virtual-text")
+					dap_virtual_text.setup({
+						commented = true,
+					})
+				end,
+			},
 
-	{
-		"rcarriga/nvim-dap-ui",
-		-- after = "nvim-dap",
-		config = function()
-			require("custom.configs.nvim-dap-ui")
-		end,
+			{
+				"mfussenegger/nvim-dap-python",
+				-- after = "nvim-dap",
+				config = function()
+					require("custom.configs.nvim-dap-python")
+				end,
+			},
+		},
 	},
-
-	{
-		"theHamsta/nvim-dap-virtual-text",
-		-- after = "nvim-dap",
-		config = function()
-			local dap_virtual_text = require("nvim-dap-virtual-text")
-			dap_virtual_text.setup({
-				commented = true,
-			})
-		end,
-	},
-
-	{
-		"mfussenegger/nvim-dap-python",
-		-- after = "nvim-dap",
-		config = function()
-			require("custom.configs.nvim-dap-python")
-		end,
-	},
-
 	{
 		"akinsho/git-conflict.nvim",
 		-- after = "ui",
