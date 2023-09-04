@@ -26,6 +26,8 @@ local sources = {
 	format.rubocop,
 	-- xml
 	format.xmllint,
+  -- go
+  format.gofmt
 	-- yaml
 	-- b.diagnostics.yamllint,
 	-- format.yamlfmt,

@@ -17,6 +17,8 @@ local servers = {
 	"marksman",
 	"yamlls",
 	-- "cucumber_language_server"
+  -- golang
+  "gopls"
 }
 
 for _, lsp in ipairs(servers) do
