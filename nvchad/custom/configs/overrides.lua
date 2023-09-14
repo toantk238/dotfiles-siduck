@@ -24,6 +24,7 @@ M.treesitter = {
 		"dockerfile",
 		"sql",
 		"swift",
+    "terraform"
 	},
 }
 
@@ -90,6 +91,7 @@ M.mason = {
 		"yamllint",
 		-- kotlin
 		-- "kotlin-language-server"
+    "terraform-ls"
 	},
 }
 
