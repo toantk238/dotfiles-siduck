@@ -49,3 +49,17 @@ vim.g.python_host_prog = "~/.pyenv/versions/2.7.18/bin/python"
 vim.g.wordmotion_prefix = "<Leader>"
 vim.g.coc_global_extensions = { "coc-flutter" }
 vim.opt.shell = "zsh"
+
+-- vim.g.clipboard = {
+--   name = "lemonade",
+--   copy = {
+--     ["+"] = { "lemonade", "copy" },
+--     ["*"] = { "lemonade", "copy" },
+--   },
+--   paste = {
+--     ["+"] = { "lemonade", "paste" },
+--     ["*"] = { "lemonade", "paste" },
+--   },
+--   cache_enabled = false,
+-- }
+--
