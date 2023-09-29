@@ -29,14 +29,16 @@ vim.opt.title = true
 vim.filetype.add({
 	filename = {
 		["Appfile"] = "ruby",
+		["Podfile"] = "ruby",
+		["Pluginfile"] = "ruby",
+		["env.sample"] = "bash",
 	},
 	pattern = {
 		[".*Fastfile"] = "ruby",
-		["Pluginfile"] = "ruby",
 		["Jenkinsfile.*"] = "groovy",
 		[".envrc.*"] = "bash",
 		["Dockerfile.*"] = "dockerfile",
-    [".*appiumsession.*"] = "json"
+		[".*appiumsession.*"] = "json",
 	},
 })
 
