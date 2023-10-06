@@ -99,6 +99,14 @@ M.textcase = {
 			"<esc>:lua require('textcase').current_word('to_snake_case')<CR>",
 			"Convert current word to snake case",
 		},
+		["gac"] = {
+			"<esc>:lua require('textcase').current_word('to_camel_case')<CR>",
+			"Convert current word to camel case",
+		},
+		["gap"] = {
+			"<esc>:lua require('textcase').current_word('to_pascal_case')<CR>",
+			"Convert current word to pascal case",
+		},
 	},
 }
 
