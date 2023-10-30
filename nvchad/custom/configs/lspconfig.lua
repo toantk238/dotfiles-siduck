@@ -9,7 +9,7 @@ local servers = {
 	"jsonls",
 	-- "tsserver",
 	"unocss",
-	"emmet_language_server",
+	-- "emmet_language_server",
 	-- "lua_ls",
 	-- "bashls",
 	-- "pyright",
@@ -27,9 +27,9 @@ local servers = {
 local custom_on_attach = function(client, bufnr)
 	on_attach(client, bufnr)
 
-	if client.server_capabilities.inlayHintProvider then
-		vim.lsp.inlay_hint(bufnr, true)
-	end
+	-- if client.server_capabilities.inlayHintProvider then
+	-- 	vim.lsp.inlay_hint(bufnr, true)
+	-- end
 end
 
 -- lsps with default config

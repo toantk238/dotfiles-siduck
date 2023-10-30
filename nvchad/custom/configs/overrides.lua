@@ -64,7 +64,7 @@ M.mason = {
 		"json-lsp",
 		-- "tailwindcss-language-server",
 		"unocss-language-server",
-    "emmet-language-server",
+    -- "emmet-language-server",
 
 		-- shell
 		"shfmt",
