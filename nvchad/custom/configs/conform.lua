@@ -13,6 +13,7 @@ local options = {
 		kotlin = { "ktlint" },
 		java = { "google-java-format" },
 		xml = { "xmlformat" },
+		ruby = { "rubocop" },
 	},
 }
 
