@@ -25,6 +25,7 @@ M.treesitter = {
 		"sql",
 		"swift",
 		"terraform",
+    "hurl"
 	},
 }
 

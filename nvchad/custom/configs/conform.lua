@@ -9,6 +9,7 @@ local options = {
 		html = { "prettier" },
 		json = { "prettier" },
 		sh = { "shfmt" },
+		zsh = { "shfmt" },
 		python = { "autopep8" },
 		kotlin = { "ktlint" },
 		java = { "google-java-format" },

@@ -81,7 +81,10 @@ return {
 
 			-- register mdx ft
 			vim.filetype.add({
-				extension = { mdx = "mdx" },
+				extension = {
+					mdx = "mdx",
+					hurl = "hurl",
+				},
 			})
 
 			vim.treesitter.language.register("markdown", "mdx")
