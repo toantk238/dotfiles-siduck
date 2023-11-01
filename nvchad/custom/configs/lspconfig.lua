@@ -48,6 +48,7 @@ require("typescript-tools").setup({
 		tsserver_path = vim.env.TSSERVER_JS,
 	},
 })
+
 lspconfig.pyright.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,

@@ -24,17 +24,17 @@ M.shade = {
 	},
 }
 
--- M.lsp = {
--- 	n = {
--- 		["<leader>fm"] = {
---
--- 			function()
--- 				require("conform").format()
--- 			end,
--- 			"format with conform",
--- 		},
--- 	},
--- }
+M.lsp = {
+	n = {
+		["<leader>fm"] = {
+
+			function()
+				require("conform").format()
+			end,
+			"format with conform",
+		},
+	},
+}
 
 -- M.nvterm = {
 --   n = {
