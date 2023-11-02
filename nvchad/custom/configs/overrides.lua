@@ -79,8 +79,8 @@ M.mason = {
     "xmlformatter",
 
 		-- ruby
-		"rubocop",
-		"solargraph",
+		-- "rubocop",
+		-- "solargraph",
 
 		-- python
 		"pyright",
