@@ -44,12 +44,12 @@ vim.opt.shell = "zsh"
 vim.g.clipboard = {
 	name = "lemonade",
 	copy = {
-		["+"] = { "lemonade", "copy" },
-		["*"] = { "lemonade", "copy" },
+		["+"] = { "lemonade", "copy", "--host=127.0.0.1" },
+		["*"] = { "lemonade", "copy", "--host=127.0.0.1" },
 	},
 	paste = {
-		["+"] = { "lemonade", "paste" },
-		["*"] = { "lemonade", "paste" },
+		["+"] = { "lemonade", "paste", "--host=127.0.0.1" },
+		["*"] = { "lemonade", "paste", "--host=127.0.0.1" },
 	},
 	cache_enabled = false,
 }
