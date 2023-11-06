@@ -16,6 +16,7 @@ local options = {
 		java = { "google-java-format" },
 		xml = { "xmlformat" },
 		ruby = { "rubocop" },
+		yaml = { "yamlfmt" },
 	},
 }
 
