@@ -46,10 +46,10 @@ local opts = { silent = true, nowait = true }
 -- Symbol renaming
 keyset("n", "<leader>qf", "<Plug>(coc-fix-current)", opts)
 
-function _G.format_buffer()
-	vim.fn.CocActionAsync("format")
-end
-keyset("n", "<leader>fm", "<CMD>lua _G.format_buffer()<CR>", { silent = true })
+-- function _G.format_buffer()
+-- 	vim.fn.CocActionAsync("format")
+-- end
+-- keyset("n", "<leader>fm", "<CMD>lua _G.format_buffer()<CR>", { silent = true })
 function _G.orgranize_imports()
 	vim.fn.CocActionAsync("runCommand", "editor.action.organizeImport")
 end

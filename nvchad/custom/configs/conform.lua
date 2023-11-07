@@ -17,6 +17,7 @@ local options = {
 		xml = { "xmlformat" },
 		ruby = { "rubocop" },
 		yaml = { "yamlfmt" },
+		dart = { "dart_format" },
 	},
 }
 
