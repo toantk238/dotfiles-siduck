@@ -22,7 +22,13 @@ local options = {
 }
 
 require("conform").formatters.autopep8 = {
-	prepend_args = { "--max-line-length", "120" },
+	prepend_args = { "--max-line-length", "140" },
+}
+
+local ktlint_config_file = vim.fn.stdpath("config") .. "/config/kotlin/.editorconfig"
+
+require("conform").formatters.ktlint = {
+	prepend_args = { "--editorconfig=" .. ktlint_config_file },
 }
 
 require("conform").formatters.prettier = {

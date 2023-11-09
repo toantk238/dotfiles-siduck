@@ -94,11 +94,13 @@ lspconfig.cucumber_language_server.setup({
 	cmd = { "cucumber-language-server", "--stdio" },
 })
 
--- lspconfig.kotlin_language_server.setup({
--- 	on_attach = on_attach,
--- 	capabilities = capabilities,
---   root_dir=lspconfig.util.root_pattern("settings.gradle", "settings.gradle.kts")
--- })
+if vim.fn.executable("kotlin-langague-server") then
+	lspconfig.kotlin_language_server.setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+		root_dir = lspconfig.util.root_pattern("settings.gradle", "settings.gradle.kts"),
+	})
+end
 
 --local java_17_home = os.getenv("JAVA_17_HOME")
 --if java_17_home then
