@@ -108,7 +108,7 @@ M.cmp = {
 		{ name = "path" },
 		{ name = "luasnip" },
 		{ name = "buffer" },
-		{ name = "codeium" },
+		-- { name = "codeium" },
 		{ name = "nvim_lua" },
 	},
 	experimental = {
