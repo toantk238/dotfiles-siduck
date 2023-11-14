@@ -374,7 +374,9 @@ return {
 					javascript = true,
 					typescript = true,
 					typescriptreact = true,
-          kotlin = true,
+					kotlin = true,
+					python = true,
+					java = true,
 					["*"] = false,
 				},
 				copilot_node_command = vim.fn.expand("$HOME") .. "/.nvm/versions/node/v20.9.0/bin/node", -- Node.js version must be > 18.x
