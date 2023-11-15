@@ -32,7 +32,7 @@ require("conform").formatters.ktlint = {
 }
 
 require("conform").formatters.prettier = {
-	prepend_args = { "--print-width", "120" },
+	-- prepend_args = { "--print-width", "120" },
 }
 
 require("conform").formatters.xmlformat = {
