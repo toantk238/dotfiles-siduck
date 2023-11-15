@@ -55,3 +55,15 @@ vim.g.clipboard = {
 }
 
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,localoptions"
+vim.g.db_ui_auto_execute_table_helpers = 1
+vim.g.db_ui_default_query = 'select * from "{table}" limit 10'
+
+local all_dbs = os.getenv("DBS_URL")
+if all_dbs and all_dbs ~= "" then
+	vim.g.dbs = vim.json.decode(all_dbs)
+end
+
+local db_ui_save_location = os.getenv("DB_UI_SAVE_LOCATION")
+if db_ui_save_location and db_ui_save_location ~= "" then
+	-- vim.g.db_ui_save_location = db_ui_save_location
+end
