@@ -63,7 +63,8 @@ if all_dbs and all_dbs ~= "" then
 	vim.g.dbs = vim.json.decode(all_dbs)
 end
 
-local db_ui_save_location = os.getenv("DB_UI_SAVE_LOCATION")
+-- vim.g.db_ui_save_location = "~/Public/Workspace/StreetChat/backend_java/queries"
+local db_ui_save_location = os.getenv("SQL_SAVE_LOCATION")
 if db_ui_save_location and db_ui_save_location ~= "" then
-	-- vim.g.db_ui_save_location = db_ui_save_location
+	vim.g.db_ui_save_location = db_ui_save_location
 end
