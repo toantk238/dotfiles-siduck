@@ -396,7 +396,7 @@ return {
 		end,
 	},
 	{
-		"kristijanhusak/vim-dadbod-ui",
+		"nangchan/vim-dadbod-ui",
 		dependencies = {
 			{ "tpope/vim-dadbod", lazy = true },
 			{ "kristijanhusak/vim-dadbod-completion", ft = { "sql", "mysql", "plsql" }, lazy = true },
@@ -410,6 +410,7 @@ return {
 		init = function()
 			-- Your DBUI configuration
 			vim.g.db_ui_use_nerd_fonts = 1
+      vim.g.db_ui_expand_query_results = 1
 		end,
 	},
 }
