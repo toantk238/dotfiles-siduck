@@ -99,6 +99,7 @@ return {
 			})
 
 			vim.treesitter.language.register("markdown", "mdx")
+			vim.treesitter.language.register("sql", "mysql")
 		end,
 	},
 
