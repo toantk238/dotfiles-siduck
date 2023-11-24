@@ -119,8 +119,8 @@ return {
 			require("Comment").setup({
 				pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
 			})
-      local ft = require('Comment.ft')
-      ft.set('mysql', "#%s")
+			local ft = require("Comment.ft")
+			ft.set("mysql", "#%s")
 		end,
 	},
 
@@ -413,7 +413,29 @@ return {
 		init = function()
 			-- Your DBUI configuration
 			vim.g.db_ui_use_nerd_fonts = 1
-      vim.g.db_ui_expand_query_results = 1
+			vim.g.db_ui_expand_query_results = 1
 		end,
+	},
+	{
+		"stevearc/aerial.nvim",
+		opts = {},
+		-- Optional dependencies
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+			"nvim-tree/nvim-web-devicons",
+		},
+		config = function()
+			require("aerial").setup({
+				-- optionally use on_attach to set keymaps when aerial has attached to a buffer
+				on_attach = function(bufnr)
+					-- Jump forwards/backwards with '{' and '}'
+					vim.keymap.set("n", "{", "<cmd>AerialPrev<CR>", { buffer = bufnr })
+					vim.keymap.set("n", "}", "<cmd>AerialNext<CR>", { buffer = bufnr })
+				end,
+				backends = { "treesitter", "lsp", "markdown", "man" },
+			})
+			vim.keymap.set("n", "<leader>a", "<cmd>AerialNavToggle<CR>")
+		end,
+		lazy = false,
 	},
 }
