@@ -417,8 +417,9 @@ return {
 		end,
 	},
 	{
-		"stevearc/aerial.nvim",
+		"toantk238/aerial.nvim",
 		opts = {},
+    branch = "feature/more_languages",
 		-- Optional dependencies
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
