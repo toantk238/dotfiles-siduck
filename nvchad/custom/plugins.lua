@@ -434,7 +434,9 @@ return {
 				end,
 				backends = { "treesitter", "lsp", "markdown", "man" },
 			})
-			vim.keymap.set("n", "<leader>a", "<cmd>AerialNavToggle<CR>")
+			-- vim.keymap.set("n", "<leader>a", "<cmd>AerialNavToggle<CR>")
+			require("telescope").load_extension("aerial")
+			vim.keymap.set("n", "<leader>fc", "<cmd>:Telescope aerial<CR>")
 		end,
 		lazy = false,
 	},
