@@ -419,7 +419,7 @@ return {
 	{
 		"toantk238/aerial.nvim",
 		opts = {},
-    branch = "feature/more_languages",
+		branch = "feature/more_languages",
 		-- Optional dependencies
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
@@ -434,6 +434,7 @@ return {
 					vim.keymap.set("n", "}", "<cmd>AerialNext<CR>", { buffer = bufnr })
 				end,
 				backends = { "treesitter", "lsp", "markdown", "man" },
+				filter_kind = false,
 			})
 			-- vim.keymap.set("n", "<leader>a", "<cmd>AerialNavToggle<CR>")
 			require("telescope").load_extension("aerial")
