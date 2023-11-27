@@ -434,7 +434,18 @@ return {
 					vim.keymap.set("n", "}", "<cmd>AerialNext<CR>", { buffer = bufnr })
 				end,
 				backends = { "treesitter", "lsp", "markdown", "man" },
-				filter_kind = false,
+				-- filter_kind = false,
+				filter_kind = {
+					"Class",
+					"Constructor",
+					"Enum",
+					"Function",
+					"Interface",
+					"Module",
+					"Method",
+					"Struct",
+					"Property",
+				},
 			})
 			-- vim.keymap.set("n", "<leader>a", "<cmd>AerialNavToggle<CR>")
 			require("telescope").load_extension("aerial")
