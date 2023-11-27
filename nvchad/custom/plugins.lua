@@ -453,4 +453,8 @@ return {
 		end,
 		lazy = false,
 	},
+	{
+		"Asheq/close-buffers.vim",
+    cmd = "Bdelete"
+	},
 }

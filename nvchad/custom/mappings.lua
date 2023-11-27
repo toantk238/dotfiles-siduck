@@ -3,8 +3,8 @@ local M = {}
 M.general = {
 	n = {
 		[";"] = { ":", "command mode", opts = { nowait = true } },
-		["<leader>me"] = { ":%bd|e#<CR>", "Close all but this buffer" },
-    ["<leader>cu"] = { "<cmd>:ccl<CR>", "Close quickfix list" },
+		["<leader>mw"] = { ":%bd|e#<CR>", "Close all (windows) but this buffer" },
+		["<leader>cu"] = { "<cmd>:ccl<CR>", "Close quickfix list" },
 	},
 
 	i = {
@@ -122,6 +122,12 @@ M.textcase = {
 			"<esc>:lua require('textcase').current_word('to_pascal_case')<CR>",
 			"Convert current word to pascal case",
 		},
+	},
+}
+
+M.buffers = {
+	n = {
+		["<leader>me"] = { ":Bdelete other<CR>", "Close all but this buffer" },
 	},
 }
 
