@@ -153,6 +153,13 @@ if vim.fn.executable("kotlin-langague-server") == 1 then
 	})
 end
 
+if vim.fn.executable("sourcekit-lsp") == 1 then
+	lspconfig.sourcekit.setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+	})
+end
+
 --local java_17_home = os.getenv("JAVA_17_HOME")
 --if java_17_home then
 --	local jdtls_path = os.getenv("HOME") .. "/.local/share/nvim/mason/packages/jdtls"
