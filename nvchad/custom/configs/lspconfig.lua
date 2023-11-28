@@ -145,7 +145,7 @@ lspconfig.cucumber_language_server.setup({
 	cmd = { "cucumber-language-server", "--stdio" },
 })
 
-if vim.fn.executable("kotlin-langague-server") == 1 then
+if vim.fn.executable("kotlin-language-server") == 1 then
 	lspconfig.kotlin_language_server.setup({
 		on_attach = on_attach,
 		capabilities = capabilities,
