@@ -6,13 +6,11 @@ local servers = {
 	"html",
 	"cssls",
 	"clangd",
-	-- "jsonls",
 	-- "tsserver",
 	"unocss",
 	-- "emmet_language_server",
 	-- "lua_ls",
 	-- "bashls",
-	-- "pyright",
 	"lemminx",
 	-- "gradle_ls",
 	"marksman",
@@ -145,19 +143,26 @@ lspconfig.cucumber_language_server.setup({
 	cmd = { "cucumber-language-server", "--stdio" },
 })
 
-if vim.fn.executable("kotlin-language-server") == 1 then
-	lspconfig.kotlin_language_server.setup({
-		on_attach = on_attach,
-		capabilities = capabilities,
-		root_dir = lspconfig.util.root_pattern("settings.gradle", "settings.gradle.kts"),
-	})
-end
+local possible_lsp = {
+	["kotlin-language-server"] = function()
+		lspconfig.kotlin_language_server.setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+			root_dir = lspconfig.util.root_pattern("settings.gradle", "settings.gradle.kts"),
+		})
+	end,
+	["sourcekit-lsp"] = function()
+		lspconfig.sourcekit.setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+		})
+	end,
+}
 
-if vim.fn.executable("sourcekit-lsp") == 1 then
-	lspconfig.sourcekit.setup({
-		on_attach = on_attach,
-		capabilities = capabilities,
-	})
+for command, lsp_setup in pairs(possible_lsp) do
+	if vim.fn.executable(command) == 1 then
+		lsp_setup()
+	end
 end
 
 --local java_17_home = os.getenv("JAVA_17_HOME")
