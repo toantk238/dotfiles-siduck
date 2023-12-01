@@ -15,20 +15,32 @@ if vim.g.neovide then
 	vim.keymap.set("i", "<c-r>", "<c-s-v>")
 end
 
+local filename_table = {
+	["ruby"] = { "Appfile", "Podfile", "Pluginfile" },
+	["bash"] = { "env.sample" },
+}
+
+local pattern_table = {
+	["ruby"] = { ".*Fastfile" },
+	["groovy"] = { "Jenkinsfile.*" },
+	["bash"] = { ".envrc.*" },
+	["dockerfile"] = { "Dockerfile.*" },
+	["json"] = { ".*appiumsession.*" },
+}
+
+local function table_map_by_value(data)
+	local result = {}
+	for key, values in pairs(data) do
+		for _, single_value in ipairs(values) do
+			result[single_value] = key
+		end
+	end
+	return result
+end
+
 vim.filetype.add({
-	filename = {
-		["Appfile"] = "ruby",
-		["Podfile"] = "ruby",
-		["Pluginfile"] = "ruby",
-		["env.sample"] = "bash",
-	},
-	pattern = {
-		[".*Fastfile"] = "ruby",
-		["Jenkinsfile.*"] = "groovy",
-		[".envrc.*"] = "bash",
-		["Dockerfile.*"] = "dockerfile",
-		[".*appiumsession.*"] = "json",
-	},
+	filename = table_map_by_value(filename_table),
+	pattern = table_map_by_value(pattern_table),
 })
 
 vim.g.loaded_ruby_provider = nil
