@@ -1,11 +1,12 @@
 require("custom.commands")
 -- require "custom.autocmds"
+require("custom.mycmds")
 
 local opt = vim.opt
 opt.title = true
 
 if vim.g.neovide then
-	vim.o.guifont = "JetbrainsMono Nerd Font:h10"
+	vim.o.guifont = "JetbrainsMono Nerd Font:h14"
 
 	vim.g.neovide_refresh_rate = 75
 

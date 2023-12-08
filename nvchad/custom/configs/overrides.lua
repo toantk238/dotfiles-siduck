@@ -25,7 +25,7 @@ M.treesitter = {
 		"sql",
 		"swift",
 		"terraform",
-    "hurl"
+		"hurl",
 	},
 }
 
@@ -65,7 +65,7 @@ M.mason = {
 		"json-lsp",
 		-- "tailwindcss-language-server",
 		"unocss-language-server",
-    -- "emmet-language-server",
+		-- "emmet-language-server",
 
 		-- shell
 		"shfmt",
@@ -76,7 +76,7 @@ M.mason = {
 		-- "clang-format",
 		-- xml
 		"lemminx",
-    "xmlformatter",
+		"xmlformatter",
 
 		-- ruby
 		-- "rubocop",
