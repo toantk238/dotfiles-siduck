@@ -27,6 +27,8 @@ M.treesitter = {
 		"terraform",
 		"hurl",
 		"rust",
+		"make",
+		"cmake",
 	},
 }
 
@@ -99,7 +101,12 @@ M.mason = {
 		"terraform-ls",
 		-- java
 		"google-java-format",
+		-- rust
 		"rust-analyzer",
+		-- cmake
+		"cmake-language-server",
+		-- make file
+		"autotools-language-server",
 	},
 }
 

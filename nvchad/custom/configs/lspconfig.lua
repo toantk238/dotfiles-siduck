@@ -20,8 +20,10 @@ local servers = {
 	"gopls",
 	-- java
 	-- "jdtls"
-  "rust_analyzer"
-
+	"rust_analyzer",
+	"cmake",
+  -- make file
+	"autotools_ls",
 }
 
 local custom_on_attach = function(client, bufnr)
