@@ -20,6 +20,8 @@ local servers = {
 	"gopls",
 	-- java
 	-- "jdtls"
+  "rust_analyzer"
+
 }
 
 local custom_on_attach = function(client, bufnr)

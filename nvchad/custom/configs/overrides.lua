@@ -26,6 +26,7 @@ M.treesitter = {
 		"swift",
 		"terraform",
 		"hurl",
+		"rust",
 	},
 }
 
@@ -98,6 +99,7 @@ M.mason = {
 		"terraform-ls",
 		-- java
 		"google-java-format",
+		"rust-analyzer",
 	},
 }
 
