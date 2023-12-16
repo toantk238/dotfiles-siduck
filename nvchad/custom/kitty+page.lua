@@ -1,5 +1,6 @@
 return function(INPUT_LINE_NUMBER, CURSOR_LINE, CURSOR_COLUMN)
   print("kitty sent:", INPUT_LINE_NUMBER, CURSOR_LINE, CURSOR_COLUMN)
+  package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/go/bin;"
   vim.opt.encoding = "utf-8"
   vim.g.clipboard = {
     name = "lemonade",
