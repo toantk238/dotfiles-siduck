@@ -43,7 +43,7 @@ local M = {
 		-- prepend_args = { "--print-width", "120" },
 	},
 	["xmlformat"] = {
-		prepend_args = { "--selfclose", "--blanks", "--indent", "4" },
+		prepend_args = { "--selfclose", "--blanks", "--indent", "2" },
 	},
 	["autopep8"] = {
 		prepend_args = { "--max-line-length", "140" },

@@ -29,6 +29,7 @@ M.treesitter = {
 		"rust",
 		"make",
 		"cmake",
+    "markdown_inline"
 	},
 }
 

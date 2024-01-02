@@ -131,4 +131,10 @@ M.buffers = {
 	},
 }
 
+M.gen_code = {
+	v = {
+		["<leader>gfr"] = { ":Gen Review_Code<CR>", "Review code" },
+	},
+}
+
 return M
