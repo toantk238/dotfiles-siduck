@@ -267,9 +267,10 @@ return {
 	},
 
 	{
-		"phaazon/hop.nvim",
-		branch = "v2", -- optional but strongly recommended
-		cmd = "HopWord",
+		"smoka7/hop.nvim",
+    version = "*",
+		-- cmd = "HopWord",
+    lazy = false,
 		config = function()
 			-- you can configure Hop the way you like here; see :h hop-config
 			require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })

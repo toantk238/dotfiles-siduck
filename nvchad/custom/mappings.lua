@@ -85,7 +85,7 @@ M.spectre = {
 
 M.hop = {
 	n = {
-		["<leader>ho"] = { ":HopWord <CR>", "HopWord" },
+		["<leader>ho"] = { ":HopPattern <CR>", "HopPattern" },
 	},
 }
 
