@@ -112,7 +112,7 @@ return {
 				},
 				-- filetype = "strings", -- if filetype does not match the parser name
 			}
-      -- vim.treesitter.language.register("applestrings", "strings")
+			-- vim.treesitter.language.register("applestrings", "strings")
 		end,
 	},
 
@@ -281,9 +281,9 @@ return {
 
 	{
 		"smoka7/hop.nvim",
-    version = "*",
+		version = "*",
 		-- cmd = "HopWord",
-    lazy = false,
+		lazy = false,
 		config = function()
 			-- you can configure Hop the way you like here; see :h hop-config
 			require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
@@ -550,5 +550,9 @@ return {
 			-- }
 		end,
 		lazy = false,
+	},
+	{
+		"nvim-telescope/telescope.nvim",
+		opts = overrides.telescope,
 	},
 }

@@ -29,7 +29,7 @@ M.treesitter = {
 		"rust",
 		"make",
 		"cmake",
-    "markdown_inline"
+		"markdown_inline",
 	},
 }
 
@@ -128,7 +128,12 @@ M.cmp = {
 
 M.telescope = {
 	defaults = {
-		file_ignore_patterns = { "node_modules", ".git" },
+		file_ignore_patterns = {
+			"node_modules",
+			".git",
+			"Pods",
+			"DerivedData",
+		},
 		vimgrep_arguments = {
 			"rg",
 			"--hidden",
