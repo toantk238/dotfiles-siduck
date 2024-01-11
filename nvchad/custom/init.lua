@@ -42,6 +42,9 @@ end
 vim.filetype.add({
 	filename = table_map_by_value(filename_table),
 	pattern = table_map_by_value(pattern_table),
+	extension = {
+		strings = "strings",
+	},
 })
 
 vim.g.loaded_ruby_provider = nil
