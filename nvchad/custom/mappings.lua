@@ -5,6 +5,10 @@ M.general = {
 		[";"] = { ":", "command mode", opts = { nowait = true } },
 		["<leader>mw"] = { ":%bd|e#<CR>", "Close all (windows) but this buffer" },
 		["<leader>cu"] = { "<cmd>:ccl<CR>", "Close quickfix list" },
+		["<leader>cf"] = { '<cmd>:let @+=expand("%")<CR>', "Copy relative path" },
+		["<leader>cF"] = { '<cmd>:let @+=expand("%:p")<CR>', "Copy full path" },
+		["<leader>ct"] = { '<cmd>:let @+=expand("%:t")<CR>', "Copy filename" },
+		["<leader>ch"] = { '<cmd>:let @+=expand("%:p:h")<CR>', "Copy dir" },
 	},
 
 	i = {
@@ -104,7 +108,7 @@ M.lazygit = {
 
 M.telescope_changed_files = {
 	n = {
-		["<leader>cf"] = { ":Telescope changed_files <cr>", "Open changed files" },
+		["<leader>gf"] = { ":Telescope changed_files <cr>", "Open changed files" },
 	},
 }
 
