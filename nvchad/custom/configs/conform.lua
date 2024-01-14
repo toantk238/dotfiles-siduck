@@ -21,6 +21,7 @@ local options = {
 		yaml = { "yamlfmt" },
 		dart = { "dart_format" },
 		markdown = { "deno_fmt" },
+		groovy = { "groovy_lint" },
 	},
 }
 
@@ -61,6 +62,16 @@ local M = {
 		end,
 	},
 }
+
+if vim.fn.executable("npm-groovy-lint") then
+	M["groovy_lint"] = {
+
+		command = vim.fn.expand("$HOME/.local/bin/npm-groovy-lint"),
+		args = { "--format", "$FILENAME" },
+		stdin = false,
+		exit_codes = { 0, 1 },
+	}
+end
 
 for formatter, config in pairs(M) do
 	formatters[formatter] = config
