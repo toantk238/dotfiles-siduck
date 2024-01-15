@@ -108,6 +108,8 @@ M.mason = {
 		"cmake-language-server",
 		-- make file
 		"autotools-language-server",
+		"texlab",
+		"latexindent",
 	},
 }
 

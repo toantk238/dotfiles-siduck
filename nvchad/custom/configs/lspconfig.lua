@@ -22,8 +22,9 @@ local servers = {
 	-- "jdtls"
 	"rust_analyzer",
 	"cmake",
-  -- make file
+	-- make file
 	"autotools_ls",
+	"texlab",
 }
 
 local custom_on_attach = function(client, bufnr)

@@ -22,6 +22,7 @@ local options = {
 		dart = { "dart_format" },
 		markdown = { "deno_fmt" },
 		groovy = { "groovy_lint" },
+		tex = { "latexindent" },
 	},
 }
 
