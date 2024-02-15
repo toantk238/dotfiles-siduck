@@ -44,6 +44,7 @@ vim.filetype.add({
 	pattern = table_map_by_value(pattern_table),
 	extension = {
 		strings = "strings",
+		conf = "config",
 	},
 })
 

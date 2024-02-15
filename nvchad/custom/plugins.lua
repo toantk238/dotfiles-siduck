@@ -80,7 +80,21 @@ return {
 	},
 
 	-- override default configs
-	{ "nvim-tree/nvim-tree.lua", opts = overrides.nvimtree },
+	{
+		"nvim-tree/nvim-tree.lua",
+		opts = overrides.nvimtree,
+		config = function(_, opts)
+			require("nvim-tree").setup(opts)
+			vim.cmd([[
+        " :hi link NvimTreeSpecialFile NvimTreeNormal
+        :hi link NvimTreeExecFile Title
+        :hi link NvimTreeImageFile NvimTreeNormal
+        :hi link NvimTreeSpecialFile  NvimTreeNormal
+        :hi link NvimTreeSymlink       NvimTreeSpecialFile
+        " :hi NvimTreeSymlink guifg=red
+      ]])
+		end,
+	},
 
 	{
 		"nvim-treesitter/nvim-treesitter",
