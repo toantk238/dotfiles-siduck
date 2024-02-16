@@ -106,6 +106,12 @@ M.lazygit = {
 	},
 }
 
+M.telescope = {
+	n = {
+		["<leader>fs"] = { ":Telescope resume <CR>", "Telescope resume" },
+	},
+}
+
 M.telescope_changed_files = {
 	n = {
 		["<leader>gf"] = { ":Telescope changed_files <cr>", "Open changed files" },
