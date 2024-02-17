@@ -115,12 +115,12 @@ M.mason = {
 
 M.cmp = {
 	sources = {
+		{ name = "codeium" },
 		-- trigger_characters is for unocss lsp
 		{ name = "nvim_lsp", trigger_characters = { "-" } },
 		{ name = "path" },
 		{ name = "luasnip" },
 		{ name = "buffer" },
-		-- { name = "codeium" },
 		{ name = "nvim_lua" },
 	},
 	experimental = {
@@ -138,7 +138,8 @@ M.telescope = {
 		},
 		vimgrep_arguments = {
 			"rg",
-			"--hidden",
+			-- "--hidden",
+			-- "--no-ignore",
 			"-L",
 			"--color=never",
 			"--no-heading",
