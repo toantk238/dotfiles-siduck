@@ -42,7 +42,7 @@ return {
 			-- ai based completion
 			{
 				"Exafunction/codeium.nvim",
-        lazy = false,
+				lazy = false,
 				dependencies = {
 					"nvim-lua/plenary.nvim",
 					"hrsh7th/nvim-cmp",
@@ -575,5 +575,10 @@ return {
 	{
 		"nvim-telescope/telescope.nvim",
 		opts = overrides.telescope,
+	},
+	{
+		"ellisonleao/glow.nvim",
+		config = true,
+		cmd = "Glow",
 	},
 }

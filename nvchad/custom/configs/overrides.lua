@@ -115,9 +115,9 @@ M.mason = {
 
 M.cmp = {
 	sources = {
-		{ name = "codeium" },
 		-- trigger_characters is for unocss lsp
 		{ name = "nvim_lsp", trigger_characters = { "-" } },
+		{ name = "codeium" },
 		{ name = "path" },
 		{ name = "luasnip" },
 		{ name = "buffer" },

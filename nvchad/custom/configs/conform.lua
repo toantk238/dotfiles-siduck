@@ -40,6 +40,7 @@ local ktlint_config_file = vim.fn.stdpath("config") .. "/config/kotlin/.editorco
 local M = {
 	["ktlint"] = {
 		prepend_args = { "--editorconfig=" .. ktlint_config_file },
+		exit_codes = { 0, 1 },
 	},
 	["prettier"] = {
 		-- prepend_args = { "--print-width", "120" },
