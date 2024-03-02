@@ -30,7 +30,7 @@ return {
 				"L3MON4D3/LuaSnip",
 				config = function(_, opts)
 					-- load default luasnip config
-					require("plugins.configs.others").luasnip(opts)
+					-- require("plugins.configs.others").luasnip(opts)
 
 					local luasnip = require("luasnip")
 					luasnip.filetype_extend("javascriptreact", { "html" })

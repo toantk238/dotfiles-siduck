@@ -1,20 +1,15 @@
 local M = {}
+local map = vim.keymap.set
 
-M.general = {
-	n = {
-		[";"] = { ":", "command mode", opts = { nowait = true } },
-		["<leader>mw"] = { ":%bd|e#<CR>", "Close all (windows) but this buffer" },
-		["<leader>cu"] = { "<cmd>:ccl<CR>", "Close quickfix list" },
-		["<leader>cf"] = { '<cmd>:let @+=expand("%")<CR>', "Copy relative path" },
-		["<leader>cF"] = { '<cmd>:let @+=expand("%:p")<CR>', "Copy full path" },
-		["<leader>ct"] = { '<cmd>:let @+=expand("%:t")<CR>', "Copy filename" },
-		["<leader>ch"] = { '<cmd>:let @+=expand("%:p:h")<CR>', "Copy dir" },
-	},
+-- map("n", ";", ":", { desc = "command mode", opts = { nowait = true } })
+-- map("n", "<leader>mw", ":%bd|e#<CR>", { desc = "Close all (windows) but this buffer" })
+map("n", "<leader>cu", "<cmd>:ccl<CR>", { desc = "Close quickfix list" })
+map("n", "<leader>cf", '<cmd>:let @+=expand("%")<CR>', { desc = "Copy relative path" })
+map("n", "<leader>cF", '<cmd>:let @+=expand("%:p")<CR>', { desc = "Copy full path" })
+map("n", "<leader>ct", '<cmd>:let @+=expand("%:t")<CR>', { desc = "Copy filename" })
+map("n", "<leader>ch", '<cmd>:let @+=expand("%:p:h")<CR>', { desc = "Copy dir" })
 
-	i = {
-		["jk"] = { "<ESC>", "escape insert mode" },
-	},
-}
+-- ["jk"] = { "<ESC>", "escape insert mode" },
 
 M.shade = {
 	n = {
@@ -28,17 +23,9 @@ M.shade = {
 	},
 }
 
-M.lsp = {
-	n = {
-		["<leader>fm"] = {
-
-			function()
-				require("conform").format()
-			end,
-			"format with conform",
-		},
-	},
-}
+map("n", "<leader>fm", function()
+	require("conform").format()
+end, { desc = "format with conform" })
 
 -- M.nvterm = {
 --   n = {
@@ -60,63 +47,31 @@ M.lsp = {
 --   },
 -- }
 
-M.tagbar = {
-	n = {
-		["<F7>"] = { ":TagbarToggle <CR>", "toggle Tag Bar" },
-	},
-}
+map("n", "<F7>", ":TagbarToggle <CR>", { desc = "toggle Tag Bar" })
 
-M.dap = {
-	n = {
-		["<F5>"] = { "<cmd>lua require'dap'.continue()<cr>", "Start Debug" },
-		["<F8>"] = { "<cmd>lua require'dap'.step_into()<cr>", "Step Into" },
-		["<F12>"] = { "<cmd>lua require'dap'.step_out()<cr>", "Step Out" },
-		["<F9>"] = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" },
-		["<F3>"] = { "<cmd>lua require'dap'.terminate()<cr>", "Terminate" },
-		["<leader>du"] = { "<cmd>lua require'dapui'.toggle()<cr>", "Toggle UI" },
-		["<leader>dh"] = { "<cmd>lua require'dap.ui.widgets'.hover()<cr>", "Hover Variables" },
-		["<leader>ep"] = { "<cmd>lua require'dapui'.eval(vim.fn.input '[Expression] > ')<cr>", "Evaluate Input" },
-		["<leader>de"] = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Toggle Repl" },
-	},
-}
+map("n", "<F5>", "<cmd>lua require'dap'.continue()<cr>", { desc = "Start Debug" })
+map("n", "<F8>", "<cmd>lua require'dap'.step_into()<cr>", { desc = "Step Into" })
+map("n", "<F12>", "<cmd>lua require'dap'.step_out()<cr>", { desc = "Step Out" })
+map("n", "<F9>", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", { desc = "Toggle Breakpoint" })
+map("n", "<F3>", "<cmd>lua require'dap'.terminate()<cr>", { desc = "Terminate" })
+map("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", { desc = "Toggle UI" })
+map("n", "<leader>dh", "<cmd>lua require'dap.ui.widgets'.hover()<cr>", { desc = "Hover Variables" })
+map("n", "<leader>ep", "<cmd>lua require'dapui'.eval(vim.fn.input '[Expression] > ')<cr>", { desc = "Evaluate Input" })
+map("n", "<leader>de", "<cmd>lua require'dap'.repl.toggle()<cr>", { desc = "Toggle Repl" })
 
-M.spectre = {
-	n = {
-		["<leader>s"] = { "<esc>:lua require('spectre').open_visual()<CR>", "Open Search" },
-		["<leader>sw"] = { "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", "Search word" },
-	},
-}
+map("n", "<leader>s", "<esc>:lua require('spectre').open_visual()<CR>", { desc = "Open Search" })
+map("n", "<leader>sw", "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", { desc = "Search word" })
 
-M.hop = {
-	n = {
-		["<leader>fj"] = { ":HopPattern <CR>", "HopPattern" },
-	},
-}
+map("n", "<leader>fj", ":HopPattern <CR>", { desc = "HopPattern" })
 
-M.zenmode = {
-	n = {
-		["<leader>ze"] = { ":ZenMode <CR>", "Toggle ZenMode" },
-	},
-}
+map("n", "<leader>ze", ":ZenMode <CR>", { desc = "Toggle ZenMode" })
 
-M.lazygit = {
-	n = {
-		["<leader>lg"] = { ":LazyGit <CR>", "Open LazyGit" },
-		["<leader>lz"] = { ":Neogit <CR>", "Open Neogit" },
-	},
-}
+map("n", "<leader>lg", ":LazyGit <CR>", { desc = "Open LazyGit" })
+map("n", "<leader>lz", ":Neogit <CR>", { desc = "Open Neogit" })
 
-M.telescope = {
-	n = {
-		["<leader>fs"] = { ":Telescope resume <CR>", "Telescope resume" },
-	},
-}
+map("n", "<leader>fs", ":Telescope resume <CR>", { desc = "Telescope resume" })
 
-M.telescope_changed_files = {
-	n = {
-		["<leader>gf"] = { ":Telescope changed_files <cr>", "Open changed files" },
-	},
-}
+map("n", "<leader>gf", ":Telescope changed_files <cr>", { desc = "Open changed files" })
 
 M.textcase = {
 	n = {
@@ -135,16 +90,6 @@ M.textcase = {
 	},
 }
 
-M.buffers = {
-	n = {
-		["<leader>me"] = { ":Bdelete other<CR>", "Close all but this buffer" },
-	},
-}
+map("n", "<leader>me", ":Bdelete other<CR>", { desc = "Close all but this buffer" })
 
-M.gen_code = {
-	v = {
-		["<leader>gfr"] = { ":Gen Review_Code<CR>", "Review code" },
-	},
-}
-
-return M
+map("v","<leader>gfr" ,  ":Gen Review_Code<CR>", {desc = "Review code" })
