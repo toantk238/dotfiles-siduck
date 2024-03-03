@@ -11,22 +11,15 @@ map("n", "<leader>ch", '<cmd>:let @+=expand("%:p:h")<CR>', { desc = "Copy dir" }
 
 -- ["jk"] = { "<ESC>", "escape insert mode" },
 
-M.shade = {
-	n = {
-		["<Bslash>"] = {
-			function()
-				require("shade").toggle()
-			end,
-
-			"toggle shade.nvim",
-		},
-	},
-}
+map("n", "<Bslash>", function()
+	require("shade").toggle()
+end, { desc = "toggle shade.nvim" })
 
 map("n", "<leader>fm", function()
 	require("conform").format()
 end, { desc = "format with conform" })
 
+map("n", "<leader>lr", "<cmd>LspRestart<CR>", { desc = "format with conform" })
 -- M.nvterm = {
 --   n = {
 --     ["<leader>gc"] = {
@@ -92,4 +85,4 @@ M.textcase = {
 
 map("n", "<leader>me", ":Bdelete other<CR>", { desc = "Close all but this buffer" })
 
-map("v","<leader>gfr" ,  ":Gen Review_Code<CR>", {desc = "Review code" })
+map("v", "<leader>gfr", ":Gen Review_Code<CR>", { desc = "Review code" })
