@@ -276,6 +276,7 @@ return {
 				auto_session_suppress_dirs = { "~/", "~/Downloads", "/" },
 				post_restore_cmds = { "NvimTreeToggle" },
 			})
+			require("base46").load_all_highlights()
 		end,
 		lazy = false,
 		-- cmd = "SessionRestore"
