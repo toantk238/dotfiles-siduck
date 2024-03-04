@@ -102,3 +102,33 @@ M.textcase = {
 map("n", "<leader>me", ":Bdelete other<CR>", { desc = "Close all but this buffer" })
 
 map("v", "<leader>gfr", ":Gen Review_Code<CR>", { desc = "Review code" })
+
+-- Git signs
+
+map("n", "]c", function()
+	if vim.wo.diff then
+		return "]c"
+	end
+	vim.schedule(function()
+		require("gitsigns").next_hunk()
+	end)
+	return "<Ignore>"
+end, {
+	desc = "Jump to next hunk",
+	remap = true,
+	-- opts = { expr = true },
+})
+
+map("n", "[c", function()
+	if vim.wo.diff then
+		return "[c"
+	end
+	vim.schedule(function()
+		require("gitsigns").prev_hunk()
+	end)
+	return "<Ignore>"
+end, {
+	desc = "Jump to prev hunk",
+	remap = true,
+	-- opts = { expr = true },
+})
