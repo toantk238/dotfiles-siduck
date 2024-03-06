@@ -1,10 +1,10 @@
 local lspconfig = require("lspconfig")
-local on_attach = require("plugins.configs.lspconfig").on_attach
-local capabilities = require("plugins.configs.lspconfig").capabilities
+local defaultLspConfig = require("plugins.configs.lspconfig")
 
 lspconfig.lua_ls.setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
+	on_attach = defaultLspConfig.on_attach,
+	capabilities = defaultLspConfig.capabilities,
+	on_init = defaultLspConfig.on_init,
 	settings = {
 		Lua = {
 			diagnostics = {
