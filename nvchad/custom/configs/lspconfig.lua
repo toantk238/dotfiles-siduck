@@ -1,6 +1,4 @@
-local on_attach = require("plugins.configs.lspconfig").on_attach
-local capabilities = require("plugins.configs.lspconfig").capabilities
-
+local M = require("plugins.configs.lspconfig")
 local lspconfig = require("lspconfig")
 local servers = {
 	"html",
@@ -28,7 +26,7 @@ local servers = {
 }
 
 local custom_on_attach = function(client, bufnr)
-	on_attach(client, bufnr)
+	M.on_attach(client, bufnr)
 
 	-- if client.server_capabilities.inlayHintProvider then
 	-- 	vim.lsp.inlay_hint(bufnr, true)
@@ -39,13 +37,15 @@ end
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
 		on_attach = custom_on_attach,
-		capabilities = capabilities,
+		capabilities = M.capabilities,
+		on_init = M.on_init,
 	})
 end
 
 lspconfig.jsonls.setup({
 	on_attach = custom_on_attach,
-	capabilities = capabilities,
+	capabilities = M.capabilities,
+	on_init = M.on_init,
 	settings = {
 		json = {
 			-- Schemas https://www.schemastore.org
@@ -97,6 +97,7 @@ lspconfig.jsonls.setup({
 -- typescript
 require("typescript-tools").setup({
 	on_attach = custom_on_attach,
+	on_init = M.on_init,
 
 	settings = {
 		tsserver_path = vim.env.TSSERVER_JS,
@@ -104,8 +105,9 @@ require("typescript-tools").setup({
 })
 
 lspconfig.pyright.setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
+	on_attach = M.on_attach,
+	capabilities = M.capabilities,
+	on_init = M.on_init,
 	settings = {
 		python = {
 			analysis = {
@@ -117,8 +119,9 @@ lspconfig.pyright.setup({
 })
 
 lspconfig.solargraph.setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
+	on_attach = M.on_attach,
+	capabilities = M.capabilities,
+	on_init = M.on_init,
 	settings = {
 		solargraph = {
 			diagnostics = false,
@@ -133,8 +136,9 @@ lspconfig.solargraph.setup({
 -- })
 
 lspconfig.cucumber_language_server.setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
+	on_attach = M.on_attach,
+	capabilities = M.capabilities,
+	on_init = M.on_init,
 	filetypes = { "cucumber", "feature" },
 	root_dir = lspconfig.util.find_git_ancestor,
 	settings = {
@@ -151,15 +155,17 @@ lspconfig.cucumber_language_server.setup({
 local possible_lsp = {
 	["kotlin-language-server"] = function()
 		lspconfig.kotlin_language_server.setup({
-			on_attach = on_attach,
-			capabilities = capabilities,
+			on_init = M.on_init,
+			on_attach = M.on_attach,
+			capabilities = M.capabilities,
 			root_dir = lspconfig.util.root_pattern("settings.gradle", "settings.gradle.kts"),
 		})
 	end,
 	["sourcekit-lsp"] = function()
 		lspconfig.sourcekit.setup({
-			on_attach = on_attach,
-			capabilities = capabilities,
+			on_init = M.on_init,
+			on_attach = M.on_attach,
+			capabilities = M.capabilities,
 		})
 	end,
 }
