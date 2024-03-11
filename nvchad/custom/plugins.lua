@@ -42,7 +42,7 @@ return {
 			-- ai based completion
 			{
 				"Exafunction/codeium.nvim",
-				lazy = false,
+				lazy = true,
 				dependencies = {
 					"nvim-lua/plenary.nvim",
 					"hrsh7th/nvim-cmp",

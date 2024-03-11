@@ -82,22 +82,21 @@ map("n", "<leader>fs", ":Telescope resume <CR>", { desc = "Telescope resume" })
 
 map("n", "<leader>gf", ":Telescope changed_files <cr>", { desc = "Open changed files" })
 
-M.textcase = {
-	n = {
-		["gas"] = {
-			"<esc>:lua require('textcase').current_word('to_snake_case')<CR>",
-			"Convert current word to snake case",
-		},
-		["gac"] = {
-			"<esc>:lua require('textcase').current_word('to_camel_case')<CR>",
-			"Convert current word to camel case",
-		},
-		["gap"] = {
-			"<esc>:lua require('textcase').current_word('to_pascal_case')<CR>",
-			"Convert current word to pascal case",
-		},
-	},
-}
+map("n", "gas", function()
+	require("textcase").current_word("to_snake_case")
+end, {
+	desc = "Convert current word to snake case",
+})
+map("n", "gac", function()
+	require("textcase").current_word("to_camel_case")
+end, {
+	desc = "Convert current word to camel case",
+})
+map("n", "gap", function()
+	require("textcase").current_word("to_pascal_case")
+end, {
+	desc = "Convert current word to pascal case",
+})
 
 map("n", "<leader>me", ":Bdelete other<CR>", { desc = "Close all but this buffer" })
 
