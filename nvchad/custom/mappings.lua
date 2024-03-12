@@ -1,7 +1,7 @@
 local M = {}
 local map = vim.keymap.set
 
--- map("n", ";", ":", { desc = "command mode", opts = { nowait = true } })
+map("n", ";", ":", { desc = "command mode", nowait = true })
 map("n", "<leader>mw", ":%bd|e#<CR>", { desc = "Close all (windows) but this buffer" })
 map("n", "<leader>cu", "<cmd>:ccl<CR>", { desc = "Close quickfix list" })
 map("n", "<leader>cf", '<cmd>:let @+=expand("%")<CR>', { desc = "Copy relative path" })
