@@ -1,9 +1,7 @@
-require("custom.commands")
--- require "custom.autocmds"
-require("custom.mycmds")
+require "nvchad.options"
 
-local opt = vim.opt
-opt.title = true
+local o = vim.o
+o.title = true
 
 if vim.g.neovide then
 	vim.o.guifont = "JetbrainsMono Nerd Font:h14"
